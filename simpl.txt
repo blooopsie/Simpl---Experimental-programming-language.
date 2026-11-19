@@ -1,0 +1,1226 @@
+Simpl is a Python-based programming language created by Cordership (blooopsie)
+in 2026, intended to be simple.
+
+Syntax
+
++----------------------------------+----------------------------------+
+| Operation/command                | Meaning                          |
++==================================+==================================+
+| +                                | Adds two numbers/Iterable        |
+|                                  | concatenation                    |
++----------------------------------+----------------------------------+
+| -                                | Subtracts two numbers            |
++----------------------------------+----------------------------------+
+| *                                | Multiplies two numbers/Multiply  |
+|                                  | an iterable with an integer      |
++----------------------------------+----------------------------------+
+| /                                | Divides two numbers              |
++----------------------------------+----------------------------------+
+| //                               | Int division                     |
++----------------------------------+----------------------------------+
+| **                               | Exponentiation                   |
++----------------------------------+----------------------------------+
+| =                                | Assignment                       |
++----------------------------------+----------------------------------+
+| +=                               | Addition assignment.             |
++----------------------------------+----------------------------------+
+| -=                               | Subtraction assignment.          |
++----------------------------------+----------------------------------+
+| *=                               | Multiplication assignment.       |
++----------------------------------+----------------------------------+
+| /=                               | Division assignment.             |
++----------------------------------+----------------------------------+
+| //=                              | Int division assignment.         |
++----------------------------------+----------------------------------+
+| **=                              | Exponentiation assignment.       |
++----------------------------------+----------------------------------+
+| ==                               | Equal to                         |
++----------------------------------+----------------------------------+
+| >                                | Greater than                     |
++----------------------------------+----------------------------------+
+| <                                | Less than                        |
++----------------------------------+----------------------------------+
+| >=                               | Greater than or equal to         |
++----------------------------------+----------------------------------+
+| <=                               | Less than or equal to            |
++----------------------------------+----------------------------------+
+| &                                | Bitwise AND.                     |
++----------------------------------+----------------------------------+
+| |                                | Bitwise OR.                      |
++----------------------------------+----------------------------------+
+| ?                                | Bitwise NOT.                     |
++----------------------------------+----------------------------------+
+| !                                | Factorial                        |
++----------------------------------+----------------------------------+
+| sqrt()                           | Sqrt of a number                 |
++----------------------------------+----------------------------------+
+| mod(a, b)                        | The remainder of integer         |
+|                                  | division a/b.                    |
++----------------------------------+----------------------------------+
+| sin()                            | Sine of a number                 |
++----------------------------------+----------------------------------+
+| cos()                            | Cosine of a number               |
++----------------------------------+----------------------------------+
+| tan()                            | Tan of a number                  |
++----------------------------------+----------------------------------+
+| asin()                           | Arcsin of a number               |
++----------------------------------+----------------------------------+
+| acos()                           | Arccos of a number               |
++----------------------------------+----------------------------------+
+| atan()                           | Arctan of a number               |
++----------------------------------+----------------------------------+
+| hyp(a, n, b)                     | Succession if n = 0, a + b if n  |
+|                                  | = 1, a * b if n = 2, a ^ b if n  |
+|                                  | = 3, a tetrated to b if n = 4,   |
+|                                  | so on...                         |
++----------------------------------+----------------------------------+
+| log(a, b)                        | Outputs a number n where a ^ n = |
+|                                  | b                                |
++----------------------------------+----------------------------------+
+| print()                          | Prints to stdout                 |
++----------------------------------+----------------------------------+
+| def f(x) : [blah blah blah]      | Sets f(x) to [blah blah blah].   |
++----------------------------------+----------------------------------+
+| var a = [blah blah blah]         | Sets variable a to [blah blah    |
+|                                  | blah]                            |
++----------------------------------+----------------------------------+
+| print (n)("cars")                | Prints the first bracketed text, |
+|                                  | then print the second bracketed  |
+|                                  | text, connecting smoothly.       |
++----------------------------------+----------------------------------+
+| endprog                          | Ends the program.                |
++----------------------------------+----------------------------------+
+| endsys(n)                        | End program with exit code n.    |
++----------------------------------+----------------------------------+
+| var a = usrinp()                 | Sets variable a as the user      |
+|                                  | input.                           |
++----------------------------------+----------------------------------+
+| check if [desired condition]:    | If desired condition is met...   |
+| else:                            |                                  |
++----------------------------------+----------------------------------+
+| check if [desired condition]:    | If the desired condition is met, |
+|                                  | continue the code in this        |
+|                                  | command. Otherwise, skip it.     |
++----------------------------------+----------------------------------+
+| while condition:                 | While condition is true…         |
++----------------------------------+----------------------------------+
+| and                              | Logical AND.                     |
++----------------------------------+----------------------------------+
+| or                               | Logical OR.                      |
++----------------------------------+----------------------------------+
+| not                              | Logical NOT.                     |
++----------------------------------+----------------------------------+
+| add (n) to list (iterable)       | Appends an element to the end of |
+|                                  | an iterable.                     |
++----------------------------------+----------------------------------+
+| print list ([list name])         | Prints list [list name].         |
++----------------------------------+----------------------------------+
+| loop n:                          | Loops n times.                   |
++----------------------------------+----------------------------------+
+| pass                             | Does absolutely nothing.         |
++----------------------------------+----------------------------------+
+| list add ([list name])           | Sum of all the elements in list  |
+|                                  | [list name], if all of them are  |
+|                                  | numbers.                         |
++----------------------------------+----------------------------------+
+| list multiply ([list name])      | Product of all the elements in   |
+|                                  | list [list name], if all of them |
+|                                  | are numbers.                     |
++----------------------------------+----------------------------------+
+| add (a) to list ([listname]) (n) | Adds n elements to the end of    |
+| times                            | the list, where all of them are  |
+|                                  | of the variable "a". The         |
+|                                  | variable can be changed to be    |
+|                                  | any variable.                    |
++----------------------------------+----------------------------------+
+| rand integer (a) to (b)          | Picks random integer in range    |
+|                                  | from a to b.                     |
++----------------------------------+----------------------------------+
+| rand integer between (a) (b)     | Picks random integer between a   |
+|                                  | and b.                           |
++----------------------------------+----------------------------------+
+| var ([listname]) = [blah blah    | Sets the list [listname] to      |
+| blah]                            | [blah blah blah]. Note that      |
+|                                  | lists can be nested.             |
++----------------------------------+----------------------------------+
+| [smooth]                         | Remove trailing newline.         |
++----------------------------------+----------------------------------+
+| f(x, y)                          | Function with two inputs.        |
+|                                  | Functions can be made with any   |
+|                                  | number of inputs.                |
++----------------------------------+----------------------------------+
+| while 1:                         | Repeat forever.                  |
++----------------------------------+----------------------------------+
+| while 0:                         | Avoids loop completely.          |
++----------------------------------+----------------------------------+
+| while [desired condition]        | Loops while condition is true.   |
++----------------------------------+----------------------------------+
+| !=                               | Not equal to                     |
++----------------------------------+----------------------------------+
+| change (n) to int                | Changes the value of a           |
+|                                  | float/string variable n to an    |
+|                                  | integer variable.                |
++----------------------------------+----------------------------------+
+| change (n) to float              | Changes the value of a           |
+|                                  | integer/string variable n to a   |
+|                                  | float variable.                  |
++----------------------------------+----------------------------------+
+| change (n) to str                | Changes the value of a           |
+|                                  | integer/float variable n to a    |
+|                                  | string variable.                 |
++----------------------------------+----------------------------------+
+| const.e                          | The constant e, rounded to 100   |
+|                                  | decimal digits.                  |
++----------------------------------+----------------------------------+
+| const.pi                         | The constant pi, rounded to 100  |
+|                                  | decimal digits.                  |
++----------------------------------+----------------------------------+
+| round (x) to (n)                 | Rounds x to the nearest multiple |
+|                                  | of n. If x = k * n + n / 2, then |
+|                                  | output is n * (k + 1), where k   |
+|                                  | is either an integer float or an |
+|                                  | integer.                         |
++----------------------------------+----------------------------------+
+| class Class()                    | Creates a class.                 |
++----------------------------------+----------------------------------+
+| loop all x in ([listname]):      | Loops through all the elements   |
+|                                  | in a list.                       |
++----------------------------------+----------------------------------+
+| loop all x in (""):              | Loops through all the elements   |
+|                                  | in a string.                     |
++----------------------------------+----------------------------------+
+| element (n) of ():               | Nth character of an iterable.    |
+|                                  | Note that string slicing and     |
+|                                  | steps are supported ((a:b),      |
+|                                  | (a::b), (::b)), as well as       |
+|                                  | double+ indexing (element        |
+|                                  | ()()... of ()) and assignment    |
+|                                  | (var element (n) of (mylist) =   |
+|                                  | "foo")                           |
++----------------------------------+----------------------------------+
+| length()                         | Returns length of a string,      |
+|                                  | list, or set.                    |
++----------------------------------+----------------------------------+
+| /*blah blah blah*/               | Comment with a start and an end. |
+|                                  | Linefeeds can be added.          |
++----------------------------------+----------------------------------+
+| check if (x) in ([listname]):    | Checks if the variable or string |
+|                                  | "x” is already in a list.        |
++----------------------------------+----------------------------------+
+| check if str ("string1") in      | Checks if the first string is    |
+| ("string2"):                     | already in the second string.    |
++----------------------------------+----------------------------------+
+| match element: case obj1: case   | Equivalent to many if statements |
+| obj2:... default: ...            | using equals.                    |
++----------------------------------+----------------------------------+
+| run(code)                        | Takes 2 user inputs: first one   |
+|                                  | is treated as Simpl code, the    |
+|                                  | other one is the user input for  |
+|                                  | that code (optional). A newline  |
+|                                  | separates both of them, and the  |
+|                                  | output is the output of the      |
+|                                  | code.                            |
++----------------------------------+----------------------------------+
+| :=                               | Walrus operator.                 |
++----------------------------------+----------------------------------+
+| index (element) in (iterable)    | Index of an element in a list or |
+|                                  | a string.                        |
++----------------------------------+----------------------------------+
+| char([int])                      | Returns the character with its   |
+|                                  | ASCII value as the input number. |
++----------------------------------+----------------------------------+
+| ord([char])                      | Returns the ASCII number of an   |
+|                                  | ASCII character.                 |
++----------------------------------+----------------------------------+
+| src                              | Source code of the program,      |
+|                                  | which now allows for cheating    |
+|                                  | quines.                          |
++----------------------------------+----------------------------------+
+| break                            | Self-explanatory.                |
++----------------------------------+----------------------------------+
+| continue                         | Same as in Python.               |
++----------------------------------+----------------------------------+
+| eval()                           | Evaluates a string as an         |
+|                                  | expression.                      |
++----------------------------------+----------------------------------+
+| """                              | Docstring.                       |
+| ...                              |                                  |
+| """                              |                                  |
++----------------------------------+----------------------------------+
+| iterable[n]                      | Nth item of the iterable.        |
++----------------------------------+----------------------------------+
+| else                             | Self-explanatory.                |
++----------------------------------+----------------------------------+
+| else check if…                   | Same as python’s elif.           |
++----------------------------------+----------------------------------+
+| change (n) to bool               | Changes truthy values to True,   |
+|                                  | falsy values to False.           |
++----------------------------------+----------------------------------+
+| range(a, b)                      | List of integers i where a <= i  |
+|                                  | < b.                             |
++----------------------------------+----------------------------------+
+| {a : b, c : d, ...}              | Dictionary. Empty dictionary is  |
+|                                  | {}.                              |
++----------------------------------+----------------------------------+
+| dict.get(key, val)               | Gets value of key name. If that  |
+|                                  | key name doesn't exist, it gets  |
+|                                  | the value.                       |
++----------------------------------+----------------------------------+
+| value of (keyname) in (dict)     | Self-explanatory. Keyname must   |
+|                                  | be a string.                     |
++----------------------------------+----------------------------------+
+
+Note: If a variable is added into a list, the list receives the value of
+that variable.
+
+Note 2: Between two print commands is a new line character.
+
+Note 3: The ASCII character in a memory cell equals its corresponding
+value.
+
+Note 4: Strings can also use single-quotes, as do docstrings.
+
+Note 5: Variables can either be strings or integers or floats.
+
+Note 6: Simpl is 0-indexed.
+
+Note 7: Simpl doesn't support imaginary and complex numbers unless the
+compdomain module is imported.
+
+Note 8: The user input is always treated as a string.
+
+Note 9: All functions compatible with strings are also compatible with
+docstrings.
+
+Note 10: Both strings and lists are iterables.
+
+-   Identifier names can:
+    -   have letters
+    -   have numbers but not start with one
+    -   not have spaces
+    -   have underscores
+    -   not be a keyword
+
+-   Special characters:
+    -   \n: Newline.
+    -   \t: Tab.
+    -   \\: Backslash.
+    -   \": Double quotes.
+    -   \0: Null.
+
+-   Truthy and falsy:
+
+  Truthy                        Falsy
+  ----------------------------- -----------------
+  Nonzero numbers (int/float)   0
+  Nonempty iterables            Empty iterable
+  Boolean "True"                Boolean "False"
+
+OOP
+
+Create class with property:
+
+    class MyClass:
+        prop x = 2
+
+Create class and use it to make object:
+
+    class MyClass:
+        prop n = 4
+    var p1 = MyClass(self.n)
+    print(p1.n)
+
+Delete object:
+
+    class MyClass:
+        prop k = 10
+    var n = MyClass(self.k)
+    del(n)
+
+You can create multiple objects:
+
+    class MyClass:
+        prop n = 4
+        prop p = 6
+    var p1 = MyClass(self.n)
+    var p2 = MyClass(self.p)
+    print(p1.n)
+    print(p2.n)
+
+init method:
+
+    class Car:
+        initclass(self, brand, name)
+            prop self.brand = brand
+            prop self.name = name
+    var Car1 = Car("Bugatti", "Chiron")
+    print(Car.brand)
+    print(Car.name)
+
+Change a property:
+
+     class Cat:
+         initclassclass(self, breed)
+             prop self.breed = breed
+    var cat1 = Cat("Munchkin")
+    cat1.breed = "Maine Coon"
+    print(cat1.breed)
+
+Inheritance and polymorphism:
+
+    class Esolang:
+        initclass(self, creator)
+            prop self.creator = creator
+        def cat(self):
+            print("") /*The method from the parent.*/
+    class Brainfuck(child.Esolang):
+        def cat(self): /*Inherits the Creator property.*/
+            print(",[.,]") /*Inherits method.*/
+    class Befunge(child.Esolang):
+        def cat(self):
+            print("~:1+!#@_,")
+    var Esos = [] /*Make empty list.*/
+    var bef1 = Befunge("Chris Pressey") /Make a Befunge object./
+    var bf1 = Brainfuck("Urban Muller") /Make a Brainfuck object./
+    add (bef1) to list (Esos)
+    add (bf1) to list (Esos)
+    loop all x in (Esos):
+        print(x.creator)
+        x.cat()
+
+Functional paradigm (FP) programming
+
+Lambda so that functions don't need to be attached to a name:
+
+    lambda def args: func
+
+map() inputs a list and a lambda function, then returns a list.
+
+    map([1, 2, 3, 4, 5], lambda def x: x ** x) # Returns [1, 4, 27, 256, 3125]
+
+filter() inputs a list and a lambda function that returns either True or
+False, then returns the list of all the elements that returned True.
+(order of the elements is unchanged)
+
+    import module[str] as alias[s]
+    filter(["Ava", "Bob", "Mary", "Daniel", "Patricia"], lambda def x: ord(s.firstalpha(x)) < 77) # Returns ["Ava", "Bob", "Daniel"]
+
+Finding errors
+
+This programming language has a try-catch-else method.
+
+    try: 
+        /* faulty code */
+    catch errorname:
+        /* code */
+    else:
+        /* else is optional for finding errors */
+
+Empty errorname means catch activates for any error. You can use redo in
+the method to re-execute the content inside try. An error can be raised:
+
+    raise errorname
+
+  Error               Code   Meaning                                                                                                                                                                                                                  Error message
+  ------------------- ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ----------------------------------------------------------------------------------------
+  MathError           1      Meaningless mathematical operations, for example, asin(3), (-2.5)!, sqrt(-1) (imaginary numbers are not supported unless the compdomain module is imported), and 1/0. Note that the operation (-5)! has a value, -120.   MathError: invalid mathematical operation: (meaningless mathemematical operation here)
+  NumError            2      Happens when a variable value or user input is larger than 2^64 or smaller than -2^64. Note that Simpl doesn't support BigInts.                                                                                          NumError: Number out of range
+  DataError           100    When a transfer from one datatype to another that can't be done through any means, like changing a list to a number.                                                                                                     DataError: Invalid data change
+  IdentEmptyError     101    Happens when the identifier to call isn't found.                                                                                                                                                                         IdentEmptyError: undefined identifier. Maybe define (unidentified identifier here)?
+  SyntaxError         400    Syntax is incorrect, like using unsupported symbols or leaving a bracket open.                                                                                                                                           SyntaxError: incorrect syntax
+  FileNotFound        404    Self-explanatory.                                                                                                                                                                                                        FileNotFound: file not found
+  IncorrectVal        405    The value passed in is incorrect.                                                                                                                                                                                        IncorrectVal: incorrect value
+  MemError            1002   All the memory has been exhausted. A looping counter program causes this error.                                                                                                                                          MemError: all memory exhausted
+  InternalSysError    1003   Internal system error. Please check if Simpl has been installed correctly and if all the environment variables are normal.                                                                                               InternalSysError: Internal system error
+  FatalError          1004   Fatal error. Please reinstall Simpl now.                                                                                                                                                                                 
+  NameDupIdentError   1201   When the identifier to call has the same name as another identifier of a different type.                                                                                                                                 NameDupIdentError: Many identifiers with the same name
+  RecursionError      1202   Maximum recursion reached.                                                                                                                                                                                               RecursionError: Maximum recursion reached
+  IndexError          1203   Index out of range.                                                                                                                                                                                                      IndexError: (Identifier type being used for index) index out of range
+
+Modules
+
+How to import modules
+
+You can import modules using this:
+
+    import module[modulename]
+
+This:
+
+    import module[modulename] as alias[aliasname]
+
+Or this:
+
+    from module[modulename] import item[itemname] as alias[aliasname]
+
+To import all attributes using from module[] import item[], do this:
+
+    from module[modulename] import item[*]
+
+Here’s the difference:
+
+    import module[modulename]
+    modulename.modulefunc()
+
+    from module[modulename] import item[*]
+    modulefunc()
+
+Module 1: Color
+
+The color module has these commands:
+
+  Command              Meaning
+  -------------------- ----------------------------
+  color.rgb(a, b, c)   Sets a color's RGB values.
+  color.hsv(a, b, c)   Sets a color's HSV values.
+
+Module 2: Turtle
+
+The turtle module allows the use of a turtle to draw objects. It has
+these commands and objects:
+
+  Command                                                     Meaning
+  ----------------------------------------------------------- --------------------------------------------------
+  turtle.turnleft(n)                                          Turns the turtle left by n degrees.
+  turtle.turnright(n)                                         Turns the turtle right by n degrees.
+  turtle.forw(n)                                              Moves the turtle forward by n pixels.
+  turtle.backw(n)                                             Moves the turtle backward by n pixels.
+  turtle t = turtle.turtle()                                  Makes a turtle object.
+  turtle t = turtle.screen()                                  Makes a screen object.
+  turtle.color(rgb(a, b, c))                                  Sets the color of a turtle object.
+  turtle.screencolor(color.rgb(a, b, c)/color.hsv(a, b, c))   Sets the color of a screen object.
+  turtle.changex(n)                                           Changes the turtle's x coordinate by n pixels.
+  turtle.changey(n)                                           Changes the turtle's y coordinate by n pixels.
+  turtle.hide()                                               Hides all the turtles.
+  turtle.clone()                                              A clone of a turtle.
+  turtle.allturtle.[blah blah blah]()                         Makes all turtles move the same way.
+  turtle.final()                                              Keeps the drawing even after the turtle is done.
+
+Example code that makes a 20px by 20px square on the turtle screen:
+
+    import module[turtle] as alias[t]
+    turtle n = t.turtle()
+    loop 4:
+        n.forw(20)
+        n.turnleft(90)
+    n.final()
+
+Module 3: Mathplot
+
+The mathplot module allows the use of a 2D plot (Cartesian plane) to
+turn mathematical equations into shapes. It has these commands:
+
+  Command                                       Meaning
+  --------------------------------------------- ------------------------------------------------------------------------
+  mathplot.equation(eq, thickness = n)          Shows the shape made by an equation on the plot, thickness = n pixels.
+  mathplot.showpoint((a, b))                    Shows point (a, b) on the plot.
+  point a = (m, n)                              Sets a variable to a point.
+  mathplot.showpoint((a, b), (c, d))            Shows multiple points on the plot.
+  mathplot.pointconnect()                       Connects all the points on the plot.
+  mathpoint.color.draw = color.rgb(a, b, c)     Sets the color of the shape.
+  mathpoint.color.screen = color.rgb(a, b, c)   Sets the plot color. It's black by default.
+
+For example, a piecewise function:
+
+    import module[mathplot] as alias[plt]
+    def f(n):
+        check if n < 0:
+            out n
+        else:
+            out n - 1
+    mathplot.equation(y = f(x), thickness = 5)
+
+Module 4: Gamemake
+
+The gamemake module allows programmers to make games. It has these
+commands:
+
+  Command                                                                          Definition
+  -------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  gamemake.oval(a, b, c, d, fill=color.rgb(e, f, g), outline=color.rgb(h, i, j))   An oval with the top-left and bottom-right corners of its bounding box as (a, b) and (c, d), respectively. Its fill color is rgb(e, f, g) and its outline color is rgb(h, i, j).
+  gamemake.rect(a, b, c, d, fill=color.rgb(e, f, g), outline=color.rgb(h, i, j))   A rectangle with the top-left and bottom-right corners of it as (a, b) and (c, d), respectively. Its fill color is rgb(e, f, g) and its outline color is rgb(h, i, j).
+  gamemake.xcor()                                                                  X-coordinate of an object.
+  gamemake.ycor()                                                                  Y-coordinate of an object.
+  check if ... touching ...                                                        "Touch" conditional.
+  edge_n                                                                           North edge of the screen.
+  edge_s                                                                           South edge of the screen.
+  edge_l                                                                           Left edge of the screen.
+  edge_r                                                                           Right edge of the screen.
+
+Module 5: Stack
+
+The stack module allows lists to be used as stacks. It has these
+commands:
+
+  Command                                    Definition
+  ------------------------------------------ ---------------------------------------------------
+  stack.pop([stackname])                     Pop top of a stack.
+  stack.push([element]) into ([stackname])   Pushes something into a stack.
+  stack.reverse([stackname])                 Reverse the order of all the elements in a stack.
+
+Module 6: compdomain
+
+The compdomain module finally makes the sqrt(-1) equation valid, as its
+value is i, the imaginary number. Coloring domain: a continuous color
+wheel. It has these commands:
+
+  Command                                            Definition
+  -------------------------------------------------- ------------------------------------------------------------
+  compdomain.plot(blah blah blah)                    Makes a complex plane and plots an equation on it. Uses z.
+  compdomain.recursive(blah blah blah, iterations)   Plots an equation made using z and c on the complex plane.
+
+Mandelbrot set:
+
+    import module[compdomain]
+    compdomain.recursive(z ** 2 + c, 64)
+
+Module 7: math
+
+The math module allows for 4 more mathematical operations. Here they
+are:
+
+  Command/Operation                                   Definition
+  --------------------------------------------------- ----------------------
+  math.flr()                                          Floor of a number.
+  math.ceil()                                         Ceiling of a number.
+  math.sum(n = lower_bound, upper_bound, function)    Summation.
+  math.prod(n = lower_bound, upper_bound, function)   Repeated product.
+
+The PSTF function:
+
+    import module[math] as alias[m]
+    t = usrinp()
+    change (t) to int
+    print(m.sum(n = 1, t, sin(n ** 3 + 1)))
+
+Module 8: str
+
+The str module allows for more messing around with strings. It has these
+commands:
+
+  Command                                                    Definition
+  ---------------------------------------------------------- --------------------------------------------------------------------------------------
+  str.firstdigit()                                           Returns the first digit (from 0 to 9) in a string.
+  str.isdigit()                                              Check if the string has only digits.
+  str.firstupper()                                           Returns the first uppercase letter in a string.
+  str.isupper()                                              Checks if the string has only uppercase letters.
+  str.firstlower()                                           Returns the first lowercase letter in a string.
+  str.islower()                                              Checks if the string has only lowercase letters.
+  str.replace(string, replaced_str, replacement_str)         Replaces a specified phrase with another specified phrase.
+  str.replace(string, replaced_str, replacement_str, n)      Replaces the first n occurences of a specified phrase with another specified phrase.
+  str.firstspace()                                           Returns the first whitespace character in a string.
+  str.isspace()                                              Checks if the string has only whitespace.
+  str.map(string, substr1 : string2, substr2 : string3, …)   Replaces substrings of a string with other strings.
+
+Module 9: os
+
+The os module allows for file manipulation. It has all the commands from
+Python, along with these extra commands:
+
+  Command                                Definition
+  -------------------------------------- ----------------------------------------------------------------------------------------------
+  os.readFile(filename)                  Source code in a file.
+  os.File(filename).appendFile("text")   Appends text to a file.
+  os.readFile(filename).read(n)          First n characters of the source code in a file. If n is empty, read everything in the file.
+
+curfile is a special variable. It’s the name of the current file.
+
+Module 10: keyboard
+
+The keyboard module allows for hotkeys and key capturing. It has these
+commands:
+
+  Command                      Definition
+  ---------------------------- -------------------------------------------------
+  keyboard.write()             Simulate keyboard typing and output.
+  keyboard.pressandrelease()   Simulate keyboard combinations.
+  keyboard.KeyPressed('kbd')   Returns True if the key in brackets is pressed.
+
+Module 11: Time
+
+The time module allows for time access. It has these commands:
+
+  Command           Definition
+  ----------------- ----------------------------------------------------------------------------------------------
+  time.wait(n)      Waits for n seconds.
+  time.epoch()      Returns january 1 1970 00 00 00.
+  time.timesec()    Returns the time from the epoch (January 1st, 1970, 00:00:00 UTC) in seconds as a float.
+  time.timensec()   Returns the time from the epoch (January 1st, 1970, 00:00:00 UTC) in nanoseconds as a float.
+
+Make your own module
+
+It’s easy as saving code in a .spl file.
+
+    [(filename1).spl]
+    def blah(x):
+    ...
+
+    [(filename2).spl]
+    import module[(filename1)]
+    (filename1).blah()
+    ...
+
+First, make
+
+Codegolfing
+
+Conditionals with 1 branch
+
+    check if condition: (/Code/)
+
+Conditionals with 2 branches
+
+    check if condition: (/*Code*/) else: (/*Code*/)
+
+Match statements:
+
+    match element: if obj1: (/*code*/) /*if obj2: (/*code*/)...*/
+
+Multiple commands in one line:
+
+    cmd1; /cmd2; cmd3;.../
+
+Ternary operator:
+
+    var var_name = (cond) ? yes: (/*value1*/) no: (/*value2*/)
+
+Or this:
+
+    (cond) ? yes: (/*code*/) no: (/*code*/)
+
+Examples
+
+Hello, world!
+
+print("Hello, World!")
+
+Fibonacci sequence
+
+var a = 0
+var n = usrinp()
+change (n) to int
+def fib(x) :
+    out fib(x - 1) + fib(x - 2)
+    check if x == 0:
+        out 0
+    check if x == 1:
+        out 1
+loop n:
+    add (fib(a := a + 1)) to list (FibonacciNumbers)
+print(FibonacciNumbers)
+
+Collatz sequence
+
+var a = usrinp()
+change (a) to int
+def col (x) : 
+    check if mod(x, 2) == 1:
+        out 3 * x + 1 
+    check if mod(x, 2) == 0: 
+        out x // 2
+while a != 1:
+    assign var a = col(a)
+    add (a) to list (CollatzSequence)
+print list (CollatzSequence)
+
+Truth-machine
+
+var a = usrinp()
+change (a) to float
+check if a == 0:
+    print(0)
+else:
+check if a == 1:
+    while 1:
+        print(1)
+
+Check even/odd
+
+var a = usrinp()
+change (a) to int
+check if mod(a, 2) == 0:
+    print(a)(" is even")
+else:
+    print(a)(" is odd")
+
+Looping counter
+
+var a = ""
+while 1:
+    print(a := a + "*")
+
+99 bottles of beer on the wall
+
+var n = 99
+while n != 2:
+    print(n)(" bottles of beer on the wall\n")(n)(" bottles of beer")
+    print("Take one down, pass it around\n")(n := n - 1)(" bottles of beer on the wall\n")
+print("""
+2 bottles of beer on the wall
+2 bottles of beer
+Take one down, pass it around
+1 bottle of beer on the wall
+1 bottles of beer on the wall
+1 bottles of beer
+Take one down, pass it around
+No bottles of beer on the wall
+No bottles of beer on the wall
+No bottles of beer
+Go to the store, buy some more,
+99 bottles of beer on the wall
+""")
+
+Factorials
+
+var n = usrinp()
+change (n) to float
+def f(x):
+    out x!
+print(f(n))
+
+Disan count
+
+var n = usrinp()
+change (n) to int
+loop all x in range(0, n):
+    check if x % 2 == 0:
+        print(x + " is even")
+
+Conway’s Game Of Life LWSS
+
+print("o . . . o .\n. . . . o\no . . . o\n. o o o o")
+
+Or this:
+
+print("x = 5, y = 4, rule = B3/S23\no3bob$4bo$o3bo$b4o!")
+
+FizzBuzz
+
+loop all n in range(1, 101):
+    print([[i, "Fizz"], ["Buzz", "FizzBuzz"]][n % 3 == 0][n % 5 == 0])
+
+W110 from three inputs p, q, r
+
+var p = usrinp()
+var q = usrinp()
+var r = usrinp()
+change (p) to float
+change (q) to float
+change (r) to float
+check if p == 0:
+    check if q == 0:
+        check if r == 0:
+            print(0)
+        check if r == 1:
+            print(1)
+    check if q == 1:
+        check if r == 0:
+            print(1)
+        check if r == 1:
+            print(1)
+check if p == 1:
+    check if q == 0:
+        check if r == 0:
+            print(0)
+        check if r == 1:
+            print(1)
+    check if q == 1:
+        check if r == 0:
+            print(1)
+        check if r == 1:
+            print(0)
+
+Cat program
+
+var n = usrinp()
+print(n)
+
+Shorter:
+
+print(usrinp())
+
+Includes linefeeds:
+
+while 1:
+    print(usrinp())
+
+Reverse cat
+
+print(element (::-1) of (usrinp()))
+
+One time cat
+
+var n = usrinp()
+print(element (1) of (n))
+
+A+B Problem
+
+var a = usrinp()
+var b = usrinp()
+change (a) to float
+change (b) to float
+var sum = a + b
+print(sum)
+
+Primes using Erastothenes sieve
+
+var n = 1
+var (Primes) = []
+add (2) to list (Primes)
+add (3) to list (Primes)
+add (5) to list (Primes)
+add (7) to list (Primes)
+loop 99:
+    check if mod(n, 2) != 0:
+        check if mod(n, 3) != 0:
+            check if mod(n, 5) != 0:
+                check if mod(n, 7) != 0:
+                    add (n := n + 1) to list (Primes)
+remove (1) from list (Primes)
+loop all x in (Primes):
+    print(x)
+
+Divisors
+
+def divs(x):
+    var t = []
+    loop all i in range(1, x + 1):
+        check if x % i == 0:
+            add (i) to list (t)
+    out t
+n = usrinp()
+change (n) to int
+print(divs(n))
+
+Digital root calculator
+
+var n = usrinp()
+change (n) to float
+def digitroot(x):
+    out 1 + mod(n - 1, 9)
+print(digitroot(x))
+
+XKCD Random Number
+
+var randomize = 4
+print(randomize)
+
+Infinite loop
+
+while 1:
+    pass
+
+Pi
+
+var n = usrinp()
+var p = 0
+var PiSum = []
+change (p) to int
+def f(x):
+    out ((4 * x)! * (1103 + 26390 * x)) / ((x!) ** 4 * 396 ** (4 * x))
+loop n:
+    var t = f(p := p + 1)
+    change (t) to int
+    add t to list (PiSum)
+var a1 = list add (PiSum)
+var a2 = a1 * (2 * sqrt(2)) / 9801
+var a3 = 1 / a2
+print(a3)
+
+"Welcome" text in the istplng talk page archive before july 10th 2025
+
+print("    ___         ___    _________    ___          ________     _______       ______ _____      _________\n   /  /| ___   /  /|  /  ______/|  /  /|       ,' ______/|  ,' ____  \\    ,' ___  '___  \\    /  ______/|\n  /  / //  /| /  / / /  /|_____|/ /  / /      /  /|_____|/ /  /|__/  /|  /  /|_/  /|_/  /|  /  /|_____|/\n /  / //  / //  / / /  ______/|  /  / /      /  / /       /  / / /  / / /  / //  / //  / / /  ______/|\n/  /_//  /_//  / / /  /|_____|/ /  /_/___   /  /_/____   /  /_/_/  / / /  / //__/ //  / / /  /|_____|/\n\\______,_____,' / /________/|  /________/|  \\________/|  \\_______,' / /__/ / |__|//__/ / /________/|\n\\______,______,'  |________|/  |________|/  \\________|/  \\________,'  |__|/       |__|/  |________|/")
+
+Euler-Mascheroni constant to desired precision
+
+var t1 = usrinp()
+var PiSum = []
+var harmonicnum = []
+change (t1) to int
+var n = 0
+loop t1:
+    var t2 = 1 / n!
+    add t2 to list (sumofe)
+    var n += 1
+var t3 = log(list add (sumofe), t1)
+var t4 = 1
+var p = usrinp()
+change (p) to int
+loop p:
+    var t5 = 1 / t4
+    add t5 to list (harmonicnum)
+    var t4 += 1
+var t6 = list add (harmonicnum) - t3
+print(t6)
+
+Malbolge tritwise crazy operation
+
+var a = usrinp()
+change (a) to int
+var a = mod(a, 3)
+var b = usrinp()
+change (b) to int
+var b = mod(b, 3)
+def crazy(x1, x2):
+    check if x1 == 0:
+        check if x2 == 0:
+            out 1
+        check if x2 == 1:
+            out 1
+        check if x2 == 2:
+            out 2
+    check if x1 == 1:
+        check if x2 == 0:
+            out 0
+        check if x2 == 1:
+            out 0
+        check if x2 == 2:
+            out 2
+    check if x1 == 2:
+        check if x2 == 0:
+            out 0
+        check if x2 == 1:
+            out 2
+        check if x2 == 2:
+            out 1
+print(crazy(a, b))
+
+Tommyaweosme constant
+
+var a = 1
+while 1:
+    print(56) a := a + 1 times
+    [smooth]
+    print(87)
+
+Tommyaweosme function
+
+var a = usrinp()
+change (a) to int
+var b = 2 * (a + 5)
+check if mod(b, 10) == 0:
+    print (87)
+else:
+    while 1:
+        print (56)
+
+6-function calculator
+
+    var a1 = usrinp()
+    change (a1) to int
+    var a2 = usrinp()
+    change (a2) to int
+    var a3 = usrinp()
+    change (a3) to int
+    var a3 = mod(a3, 6) + 1
+    check if a3 == 1:
+        def f(x, y):
+            out x + y
+        print(f(a1, a2))
+    check if a3 == 2:
+        def f(x, y):
+            out x - y
+        print(f(a1, a2))
+    check if a3 == 3:
+        def f(x, y):
+            out x * y
+        print(f(a1, a2))
+    check if a3 == 4:
+        def f(x, y):
+            out x / y
+        print(f(a1, a2))
+    check if a3 == 5:
+        def f(x, y):
+            out mod(x, y)
+        print(f(a1, a2))
+    check if a3 == 6:
+        def f(x, y):
+            out x ** y
+        print(f(a1, a2))
+
+4-function calculator
+
+    var a1 = usrinp()
+    change (a1) to int
+    var a2 = usrinp()
+    change (a2) to int
+    var a3 = usrinp()
+    change (a3) to int
+    var a3 = mod(a3, 4) + 1
+    check if a3 == 1:
+        def f(x, y):
+            out x + y
+        print(f(a1, a2))
+    check if a3 == 2:
+        def f(x, y):
+            out x - y
+        print(f(a1, a2))
+    check if a3 == 3:
+        def f(x, y):
+            out x * y
+        print(f(a1, a2))
+    check if a3 == 4:
+        def f(x, y):
+            out x / y
+        print(f(a1, a2))
+
+Ackermann function
+
+var a = usrinp()
+change (a) to int
+var b = usrinp()
+change (b) to int
+def f(x1, x2):
+    out hyp(2, m, n + 3) + 3
+var t = f(a, b)
+print(t)
+
+Sgn Machine
+
+var a = usrinp()
+change (a) to float
+check if a > 0:
+    print(1)
+else check if a == 0:
+    while 1:
+        print(0)
+else:
+    print(-1)
+
+User:PrySigneToFry/烂下攫用乴 function
+
+var n = usrinp()
+change (n) to int
+vả Prod = []
+var p = 1
+loop n:
+    add (sin(p ** 3 + 1)) to list (Prod)
+print(list multiply (Prod))
+
+Recaman sequence
+
+var n = usrinp()
+change (n) to int
+var t = 0
+var a = 0
+var r = []
+loop n:
+    check if t >= 0:
+        check if t - a < 0 or t - a in (r):
+            add (t := t + a) to list (r)
+        else:
+            add (t := t - a) to list (r)
+    var a = a + 1
+print list (rec)
+
+Self-interpreter
+
+var n = usrinp()
+run(n)
+
+Graham's number
+
+def g(x):
+    check if x = 1:
+        out hyp(3, 4, 3)
+    else:
+        out hyp(3, g(x - 1), 3)
+print(g(64))
+
+ROT13 encoder
+
+    var n = []
+    var t = []
+    var a = usrinp()
+    loop all i in range(1, 27):
+        add (char(i) + 96) to list (n)
+        add (char(i) + 64) to list (t)
+    loop all x in a:
+        check if (x) in (n):
+            print(element (mod(index (n) of element (x) + 13), 26) of (n))
+            [smooth]
+        else check if (x) in (t):
+            print(element (mod(index (n) of element (x) + 13), 26) of (n))
+                [smooth]
+        else:
+                print (x)
+                [smooth]
+
+Cheating quine
+
+    print(src)
+
+Cheating narcissist
+
+    var n = usrinp()
+    check if n == src:
+        print("Accept!")
+    else:
+        print("Decline.")
+
+Golfed:
+
+    n = usrinp();(n==src) ? yes: (print("Accept!")) no: (print("Decline."))
+
+Ruler function
+
+    var a = 1
+    while 1:
+        b = log(2, a & (- a)) + 1
+        change (b) to int
+        print(b)
+        var a += 1
+
+CT interpreter
+
+    from module[str] import item[*]
+    def ct(d, cmd):
+        check if cmd == ";":
+            out replace(d, firstdigit(d), " ")
+        else check if isdigit(cmd) and firstdigit(d) == "1":
+            out d + cmd
+        else:
+            out d
+    var p = usrinp("Program: ")
+    var d = usrinp("Data-string: ")
+    var t = 0
+    while not isspace(d):
+        print(d := ct(d, p[mod(t, length(p))]))
+        var t += 1
+
+Real quine
+
+    var inp = "print('var inp = ' + char(34) + inp + char(34) + char(10) + inp)"
+    print('var inp = ' + char(34) + inp + char(34) + char(10) + inp)
+
+Another:
+
+    var inp = "print('var inp = ' + char(34) + inp + char(34) + ';' + inp)";print('var inp = ' + char(34) + inp + char(34) + ';' + inp)
+
+Fun Video Game
+
+    var n = usrinp()
+    change (n) to int
+    var t = 0
+    while t == n:
+        var n = usrinp()
+        change (n) to int
+        var t += 1
+    print("FAILURE")
+
+The Exasperation Machine interpreter
+
+    var src = usrinp()
+    var tape = {}
+    var ptr = 0
+    var ip = 0
+    while True:
+        var c = element (ip) of (src)
+        check if c in '/\\' and tape.get(ptr, 0) or c in '><':
+            var ptr += value of (c) in ({'>': 1, '<': -1, '/': 1, '\\': -1})
+        else check if c in '10':
+            change (c) to int
+            var t = c
+            change (c) to str
+            var element (ptr) of (tape) = t
+        var ip = (ip + 1) % length(src)
