@@ -318,6 +318,24 @@ Note 10: Both strings and lists are iterables.
   Nonempty iterables            Empty iterable
   Boolean "True"                Boolean "False"
 
+Precedence
+
+  Operator                   Description
+  -------------------------- -------------------------------------------------------
+  ()                         Parentheses
+  **                         Exponentiation
+  +x, -x, ~x                 Unary plus, unary minus, and bitwise NOT
+  *, /, //, %                Multiplication, division, floor division, and modulus
+  +, -                       Addition and subtraction
+  >>, <<                     Bitwise left and right shifts
+  &                          Bitwise AND
+  ^                          Bitwise XOR
+  |                          Bitwise OR
+  >, <, ==, !=, >=, <=, in   Comparison and membership operators
+  not                        Logical NOT
+  and                        AND
+  or                         OR
+
 OOP
 
 Create class with property:
