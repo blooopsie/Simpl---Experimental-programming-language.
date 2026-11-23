@@ -1,4 +1,4 @@
-Simpl is a Python-based programming language created by Cordership (blooopsie)
+Simpl is a Python-based programming language created by User:Cordership
 in 2026, intended to be simple.
 
 Syntax
@@ -49,11 +49,11 @@ Syntax
 | |                                | Bitwise OR.                      |
 +----------------------------------+----------------------------------+
 | ~                                | Bitwise NOT.                     |
-+----------------------------------+----------------------------—————-+
-| >>                               | Bitwise left shift.              |
-+----------------------------------+----------------------------—————-+
-| <<                               | Bitwise right shift.             |
-+----------------------------------+----------------------------—————-+
++----------------------------------+----------------------------------+
+| >>                               | Bitwise right shift.             |
++----------------------------------+----------------------------------+
+| <<                               | Bitwise left shift.              |
++----------------------------------+----------------------------------+
 | !                                | Factorial                        |
 +----------------------------------+----------------------------------+
 | sqrt()                           | Sqrt of a number                 |
@@ -116,8 +116,6 @@ Syntax
 +----------------------------------+----------------------------------+
 | add (n) to list (iterable)       | Appends an element to the end of |
 |                                  | an iterable.                     |
-+----------------------------------+----------------------------------+
-| print list ([list name])         | Prints list [list name].         |
 +----------------------------------+----------------------------------+
 | loop n:                          | Loops n times.                   |
 +----------------------------------+----------------------------------+
@@ -801,7 +799,7 @@ print("x = 5, y = 4, rule = B3/S23\no3bob$4bo$o3bo$b4o!")
 FizzBuzz
 
 loop all n in range(1, 101):
-    print([[i, "Fizz"], ["Buzz", "FizzBuzz"]][n % 3 == 0][n % 5 == 0])
+    print(element (n % 3 == 0])(n % 5 == 0) of [[i, "Fizz"], ["Buzz", "FizzBuzz"]])
 
 W110 from three inputs p, q, r
 
@@ -869,7 +867,7 @@ print(sum)
 Primes using Erastothenes sieve
 
 var n = 1
-var (Primes) = []
+var Primes = []
 add (2) to list (Primes)
 add (3) to list (Primes)
 add (5) to list (Primes)
@@ -892,7 +890,7 @@ def divs(x):
         check if x % i == 0:
             add (i) to list (t)
     out t
-n = usrinp()
+var n = usrinp()
 change (n) to int
 print(divs(n))
 
@@ -988,6 +986,15 @@ def crazy(x1, x2):
         check if x2 == 2:
             out 1
 print(crazy(a, b))
+
+Kolakoski sequence
+
+    var k = [1, 2, 2]
+    var i = 2
+    while True:
+        print(element (i - 2) of k)
+        k += [3 - k[-1]] * element (i) of (k)
+        i += 1
 
 Tommyaweosme constant
 
@@ -1228,3 +1235,57 @@ The Exasperation Machine interpreter
             change (c) to str
             var element (ptr) of (tape) = t
         var ip = (ip + 1) % length(src)
+
+Project Euler
+
+Project Euler/1
+
+    def sumofMult(x):
+        var n = []
+        loop all i in range(1, x):
+            add (i) to list (n)
+        out list add (n)
+    print(sumofMult(1000))
+
+Project Euler/2
+
+    def sumFib(t):
+        var n = []
+        loop all x in range(1, t):
+            check if ((5 * x ** 2 + 4) ** 0.5 % 1 == 0 or (5 * x ** 2 - 4) ** 0.5 % 1 == 0) and x % 2 == 0:
+                add (x) to list (n)
+        out list add (n)
+    print(sumFib(4000000))
+
+Project Euler/3
+
+    def largestPrimeFactor(n):
+        var prime = 2
+        while n % 2 == 0:
+            var n //= 2
+        check if n == 1:
+            out 2
+        else:
+            var prime = 3
+        while n % 3 == 0:
+            var n //= 3
+        var i = 5
+        while i < n ** 0.5:
+            while n % i == 0:
+                var prime = i
+                var n //= i
+            while n % (i + 2) == 0:
+                var prime = i + 2
+                var n //= i + 2
+            var i += 6
+        check if n > 4:
+            var prime = n
+        out prime
+    n = usrinp()
+    change (n) to int
+    print(largestPrimeFactor(n))
+
+Categories
+
+Category:Languages Category:2026 Category:Unimplemented Category:Turing
+complete Category:High-level
