@@ -44,6 +44,8 @@ Syntax
 +----------------------------------+----------------------------------+
 | <=                               | Less than or equal to            |
 +----------------------------------+----------------------------------+
+| !=                               | Not equal to.                    |
++----------------------------------+----------------------------------+
 | &                                | Bitwise AND.                     |
 +----------------------------------+----------------------------------+
 | |                                | Bitwise OR.                      |
@@ -58,7 +60,7 @@ Syntax
 +----------------------------------+----------------------------------+
 | sqrt()                           | Sqrt of a number                 |
 +----------------------------------+----------------------------------+
-| mod(a, b)                        | The remainder of integer         |
+| %                                | The remainder of integer         |
 |                                  | division a/b.                    |
 +----------------------------------+----------------------------------+
 | sin()                            | Sine of a number                 |
@@ -73,26 +75,20 @@ Syntax
 +----------------------------------+----------------------------------+
 | atan()                           | Arctan of a number               |
 +----------------------------------+----------------------------------+
-| hyp(a, n, b)                     | Succession if n = 0, a + b if n  |
-|                                  | = 1, a * b if n = 2, a ^ b if n  |
-|                                  | = 3, a tetrated to b if n = 4,   |
-|                                  | so on...                         |
+| hyp(a, n, b)                     | Hyperoperation, a{n}b.           |
 +----------------------------------+----------------------------------+
-| log(a, b)                        | Outputs a number n where a ^ n = |
-|                                  | b                                |
+| log(a, b)                        | Outputs a number n where a ** n  |
+|                                  | = b                              |
 +----------------------------------+----------------------------------+
 | print()                          | Prints to stdout                 |
 +----------------------------------+----------------------------------+
-| def f(x) : [blah blah blah]      | Sets f(x) to [blah blah blah].   |
+| def f(x): [blah blah blah]       | Defines a function.              |
 +----------------------------------+----------------------------------+
 | var a = [blah blah blah]         | Sets variable a to [blah blah    |
-|                                  | blah]                            |
+|                                  | blah]. var must be used in all   |
+|                                  | variable definitions.            |
 +----------------------------------+----------------------------------+
-| print (n)("cars")                | Prints the first bracketed text, |
-|                                  | then print the second bracketed  |
-|                                  | text, connecting smoothly.       |
-+----------------------------------+----------------------------------+
-| endprog                          | Ends the program.                |
+| print (n)("cars")                | Concatenation.                   |
 +----------------------------------+----------------------------------+
 | endsys(n)                        | End program with exit code n.    |
 +----------------------------------+----------------------------------+
@@ -102,9 +98,7 @@ Syntax
 | check if [desired condition]:    | If desired condition is met...   |
 | else:                            |                                  |
 +----------------------------------+----------------------------------+
-| check if [desired condition]:    | If the desired condition is met, |
-|                                  | continue the code in this        |
-|                                  | command. Otherwise, skip it.     |
+| check if [desired condition]:    | 1-branching condition.           |
 +----------------------------------+----------------------------------+
 | while condition:                 | While condition is true…         |
 +----------------------------------+----------------------------------+
@@ -114,26 +108,21 @@ Syntax
 +----------------------------------+----------------------------------+
 | not                              | Logical NOT.                     |
 +----------------------------------+----------------------------------+
-| add (n) to list (iterable)       | Appends an element to the end of |
-|                                  | an iterable.                     |
+| add (n) to list (list)           | Appends an element to the end of |
+|                                  | a list.                          |
 +----------------------------------+----------------------------------+
 | loop n:                          | Loops n times.                   |
 +----------------------------------+----------------------------------+
 | pass                             | Does absolutely nothing.         |
 +----------------------------------+----------------------------------+
-| list add ([list name])           | Sum of all the elements in list  |
-|                                  | [list name], if all of them are  |
-|                                  | numbers.                         |
+| list add ([list name])           | Sum of all the elements in a     |
+|                                  | list.                            |
 +----------------------------------+----------------------------------+
-| list multiply ([list name])      | Product of all the elements in   |
-|                                  | list [list name], if all of them |
-|                                  | are numbers.                     |
+| list multiply ([list name])      | Product of all the elements in a |
+|                                  | list.                            |
 +----------------------------------+----------------------------------+
-| add (a) to list ([listname]) (n) | Adds n elements to the end of    |
-| times                            | the list, where all of them are  |
-|                                  | of the variable "a". The         |
-|                                  | variable can be changed to be    |
-|                                  | any variable.                    |
+| add (a) to list ([listname]) (n) | Add something n times to a list. |
+| times                            |                                  |
 +----------------------------------+----------------------------------+
 | rand integer (a) to (b)          | Picks random integer in range    |
 |                                  | from a to b.                     |
@@ -147,27 +136,17 @@ Syntax
 +----------------------------------+----------------------------------+
 | [smooth]                         | Remove trailing newline.         |
 +----------------------------------+----------------------------------+
-| f(x, y)                          | Function with two inputs.        |
-|                                  | Functions can be made with any   |
-|                                  | number of inputs.                |
-+----------------------------------+----------------------------------+
-| while 1:                         | Repeat forever.                  |
-+----------------------------------+----------------------------------+
-| while 0:                         | Avoids loop completely.          |
-+----------------------------------+----------------------------------+
 | while [desired condition]        | Loops while condition is true.   |
 +----------------------------------+----------------------------------+
-| !=                               | Not equal to                     |
-+----------------------------------+----------------------------------+
-| change (n) to int                | Changes the value of a           |
+| changeInt(n)                     | Changes the value of a           |
 |                                  | float/string variable n to an    |
 |                                  | integer variable.                |
 +----------------------------------+----------------------------------+
-| change (n) to float              | Changes the value of a           |
+| changeFloat(n)                   | Changes the value of an          |
 |                                  | integer/string variable n to a   |
 |                                  | float variable.                  |
 +----------------------------------+----------------------------------+
-| change (n) to str                | Changes the value of a           |
+| changeStr(n)                     | Changes the value of an          |
 |                                  | integer/float variable n to a    |
 |                                  | string variable.                 |
 +----------------------------------+----------------------------------+
@@ -183,13 +162,10 @@ Syntax
 |                                  | is either an integer float or an |
 |                                  | integer.                         |
 +----------------------------------+----------------------------------+
-| class Class()                    | Creates a class.                 |
+| class Class_name:                | Creates a class.                 |
 +----------------------------------+----------------------------------+
-| loop all x in ([listname]):      | Loops through all the elements   |
-|                                  | in a list.                       |
-+----------------------------------+----------------------------------+
-| loop all x in (""):              | Loops through all the elements   |
-|                                  | in a string.                     |
+| loop all x in (iterable):        | Loops through all the elements   |
+|                                  | in an iterable.                  |
 +----------------------------------+----------------------------------+
 | element (n) of ():               | Nth character of an iterable.    |
 |                                  | Note that string slicing and     |
@@ -206,11 +182,7 @@ Syntax
 | /*blah blah blah*/               | Comment with a start and an end. |
 |                                  | Linefeeds can be added.          |
 +----------------------------------+----------------------------------+
-| check if (x) in ([listname]):    | Checks if the variable or string |
-|                                  | "x” is already in a list.        |
-+----------------------------------+----------------------------------+
-| check if str ("string1") in      | Checks if the first string is    |
-| ("string2"):                     | already in the second string.    |
+| in                               | Membership operator.             |
 +----------------------------------+----------------------------------+
 | match element: case obj1: case   | Equivalent to many if statements |
 | obj2:... default: ...            | using equals.                    |
@@ -225,8 +197,9 @@ Syntax
 +----------------------------------+----------------------------------+
 | :=                               | Walrus operator.                 |
 +----------------------------------+----------------------------------+
-| index (element) in (iterable)    | Index of an element in a list or |
-|                                  | a string.                        |
+| index (element) in (iterable)    | Index of an element (or the      |
+|                                  | first occurrence of it) in a     |
+|                                  | list or a string.                |
 +----------------------------------+----------------------------------+
 | char([int])                      | Returns the character with its   |
 |                                  | ASCII value as the input number. |
@@ -242,16 +215,11 @@ Syntax
 +----------------------------------+----------------------------------+
 | continue                         | Same as in Python.               |
 +----------------------------------+----------------------------------+
-| eval()                           | Evaluates a string as an         |
-|                                  | expression.                      |
-+----------------------------------+----------------------------------+
 | """                              | Docstring.                       |
 | ...                              |                                  |
 | """                              |                                  |
 +----------------------------------+----------------------------------+
 | iterable[n]                      | Nth item of the iterable.        |
-+----------------------------------+----------------------------------+
-| else                             | Self-explanatory.                |
 +----------------------------------+----------------------------------+
 | else check if…                   | Same as python’s elif.           |
 +----------------------------------+----------------------------------+
@@ -270,6 +238,14 @@ Syntax
 +----------------------------------+----------------------------------+
 | value of (keyname) in (dict)     | Self-explanatory. Keyname must   |
 |                                  | be a string.                     |
++----------------------------------+----------------------------------+
+| bin(x)                           | Returns the binary               |
+|                                  | representation of x, with the    |
+|                                  | prefix 0b.                       |
++----------------------------------+----------------------------------+
+| hex(x)                           | Returns the hexadecimal          |
+|                                  | representation of y, with the    |
+|                                  | prefix 0x.                       |
 +----------------------------------+----------------------------------+
 
 Note: If a variable is added into a list, the list receives the value of
@@ -335,6 +311,8 @@ Precedence
   not                        Logical NOT
   and                        AND
   or                         OR
+
+Operators at the same level are evaluated from left to right.
 
 OOP
 
@@ -441,21 +419,21 @@ the method to re-execute the content inside try. An error can be raised:
 
     raise errorname
 
-  Error               Code   Meaning                                                                                                                                                                                                                  Error message
-  ------------------- ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ----------------------------------------------------------------------------------------
-  MathError           1      Meaningless mathematical operations, for example, asin(3), (-2.5)!, sqrt(-1) (imaginary numbers are not supported unless the compdomain module is imported), and 1/0. Note that the operation (-5)! has a value, -120.   MathError: invalid mathematical operation: (meaningless mathemematical operation here)
-  NumError            2      Happens when a variable value or user input is larger than 2^64 or smaller than -2^64. Note that Simpl doesn't support BigInts.                                                                                          NumError: Number out of range
-  DataError           100    When a transfer from one datatype to another that can't be done through any means, like changing a list to a number.                                                                                                     DataError: Invalid data change
-  IdentEmptyError     101    Happens when the identifier to call isn't found.                                                                                                                                                                         IdentEmptyError: undefined identifier. Maybe define (unidentified identifier here)?
-  SyntaxError         400    Syntax is incorrect, like using unsupported symbols or leaving a bracket open.                                                                                                                                           SyntaxError: incorrect syntax
-  FileNotFound        404    Self-explanatory.                                                                                                                                                                                                        FileNotFound: file not found
-  IncorrectVal        405    The value passed in is incorrect.                                                                                                                                                                                        IncorrectVal: incorrect value
-  MemError            1002   All the memory has been exhausted. A looping counter program causes this error.                                                                                                                                          MemError: all memory exhausted
-  InternalSysError    1003   Internal system error. Please check if Simpl has been installed correctly and if all the environment variables are normal.                                                                                               InternalSysError: Internal system error
-  FatalError          1004   Fatal error. Please reinstall Simpl now.                                                                                                                                                                                 
-  NameDupIdentError   1201   When the identifier to call has the same name as another identifier of a different type.                                                                                                                                 NameDupIdentError: Many identifiers with the same name
-  RecursionError      1202   Maximum recursion reached.                                                                                                                                                                                               RecursionError: Maximum recursion reached
-  IndexError          1203   Index out of range.                                                                                                                                                                                                      IndexError: (Identifier type being used for index) index out of range
+  Error               Code   Meaning                                                                                                                           Error message
+  ------------------- ------ --------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------------------------------------------------------
+  MathError           1      Meaningless mathematical operations, for example, asin(3), (-2.5)!, and 1/0. Note that the operation (-5)! has a value, -120.     MathError: invalid mathematical operation: (meaningless mathemematical operation here)
+  NumError            2      Happens when a variable value or user input is larger than 2^64 or smaller than -2^64. Note that Simpl doesn't support BigInts.   NumError: Number out of range
+  DataError           100    When a transfer from one datatype to another that can't be done through any means, like changing a list to a number.              DataError: Invalid data change
+  IdentEmptyError     101    Happens when the identifier to call isn't found.                                                                                  IdentEmptyError: undefined identifier. Maybe define (unidentified identifier here)?
+  SyntaxError         400    Syntax is incorrect, like using unsupported symbols or leaving a bracket open.                                                    SyntaxError: incorrect syntax
+  FileNotFound        404    Self-explanatory.                                                                                                                 FileNotFound: file not found
+  IncorrectVal        405    The value passed in is incorrect.                                                                                                 IncorrectVal: incorrect value
+  MemError            1002   All the memory has been exhausted. A looping counter program causes this error.                                                   MemError: all memory exhausted
+  InternalSysError    1003   Internal system error. Please check if Simpl has been installed correctly and if all the environment variables are normal.        InternalSysError: Internal system error
+  FatalError          1004   Fatal error. Please reinstall Simpl now.                                                                                          
+  NameDupIdentError   1201   When the identifier to call has the same name as another identifier of a different type.                                          NameDupIdentError: Many identifiers with the same name
+  RecursionError      1202   Maximum recursion reached.                                                                                                        RecursionError: Maximum recursion reached
+  IndexError          1203   Index out of range.                                                                                                               IndexError: (Identifier type being used for index) index out of range
 
 Modules
 
@@ -580,9 +558,8 @@ commands:
 
 Module 6: compdomain
 
-The compdomain module finally makes the sqrt(-1) equation valid, as its
-value is i, the imaginary number. Coloring domain: a continuous color
-wheel. It has these commands:
+The compdomain module allows for support of plotted complex functions.
+Coloring domain: a continuous color wheel. It has these commands:
 
   Command                                            Definition
   -------------------------------------------------- ------------------------------------------------------------
@@ -618,19 +595,19 @@ Module 8: str
 The str module allows for more messing around with strings. It has these
 commands:
 
-  Command                                                    Definition
-  ---------------------------------------------------------- --------------------------------------------------------------------------------------
-  str.firstdigit()                                           Returns the first digit (from 0 to 9) in a string.
-  str.isdigit()                                              Check if the string has only digits.
-  str.firstupper()                                           Returns the first uppercase letter in a string.
-  str.isupper()                                              Checks if the string has only uppercase letters.
-  str.firstlower()                                           Returns the first lowercase letter in a string.
-  str.islower()                                              Checks if the string has only lowercase letters.
-  str.replace(string, replaced_str, replacement_str)         Replaces a specified phrase with another specified phrase.
-  str.replace(string, replaced_str, replacement_str, n)      Replaces the first n occurences of a specified phrase with another specified phrase.
-  str.firstspace()                                           Returns the first whitespace character in a string.
-  str.isspace()                                              Checks if the string has only whitespace.
-  str.map(string, substr1 : string2, substr2 : string3, …)   Replaces substrings of a string with other strings.
+  Command                                                      Definition
+  ------------------------------------------------------------ --------------------------------------------------------------------------------------
+  str.firstdigit()                                             Returns the first digit (from 0 to 9) in a string.
+  str.isdigit()                                                Check if the string has only digits.
+  str.firstupper()                                             Returns the first uppercase letter in a string.
+  str.isupper()                                                Checks if the string has only uppercase letters.
+  str.firstlower()                                             Returns the first lowercase letter in a string.
+  str.islower()                                                Checks if the string has only lowercase letters.
+  str.replace(string, replaced_str, replacement_str)           Replaces a specified phrase with another specified phrase.
+  str.replace(string, replaced_str, replacement_str, n)        Replaces the first n occurences of a specified phrase with another specified phrase.
+  str.firstspace()                                             Returns the first whitespace character in a string.
+  str.isspace()                                                Checks if the string has only whitespace.
+  str.map(string, {substr1 : string2, substr2 : string3, …})   Replaces substrings of a string with other strings.
 
 Module 9: os
 
@@ -641,6 +618,7 @@ Python, along with these extra commands:
   -------------------------------------- ----------------------------------------------------------------------------------------------
   os.readFile(filename)                  Source code in a file.
   os.File(filename).appendFile("text")   Appends text to a file.
+  os.make(filename)                      Makes a new file.
   os.readFile(filename).read(n)          First n characters of the source code in a file. If n is empty, read everything in the file.
 
 curfile is a special variable. It’s the name of the current file.
@@ -717,8 +695,7 @@ print("Hello, World!")
 Fibonacci sequence
 
 var a = 0
-var n = usrinp()
-change (n) to int
+var n = changeInt(usrinp())
 def fib(x) :
     out fib(x - 1) + fib(x - 2)
     check if x == 0:
@@ -731,22 +708,20 @@ print(FibonacciNumbers)
 
 Collatz sequence
 
-var a = usrinp()
-change (a) to int
+var a = changeInt(usrinp())
 def col (x) : 
-    check if mod(x, 2) == 1:
+    check if x % 2 == 1:
         out 3 * x + 1 
-    check if mod(x, 2) == 0: 
+    else: 
         out x // 2
 while a != 1:
-    assign var a = col(a)
+    var a = col(a)
     add (a) to list (CollatzSequence)
-print list (CollatzSequence)
+print (CollatzSequence)
 
 Truth-machine
 
-var a = usrinp()
-change (a) to float
+var a = changeInt(usrinp())
 check if a == 0:
     print(0)
 else:
@@ -754,11 +729,17 @@ check if a == 1:
     while 1:
         print(1)
 
+Shorter:
+
+var a = changeInt(usrinp())
+print(a)
+while a:
+    print(a)
+
 Check even/odd
 
-var a = usrinp()
-change (a) to int
-check if mod(a, 2) == 0:
+var a = changeInt(usrinp())
+check if a % 2 == 0:
     print(a)(" is even")
 else:
     print(a)(" is odd")
@@ -766,7 +747,7 @@ else:
 Looping counter
 
 var a = ""
-while 1:
+while True:
     print(a := a + "*")
 
 99 bottles of beer on the wall
@@ -792,16 +773,12 @@ Go to the store, buy some more,
 
 Factorials
 
-var n = usrinp()
-change (n) to float
-def f(x):
-    out x!
-print(f(n))
+var n = changeInt(usrinp())
+print(n!)
 
 Disan count
 
-var n = usrinp()
-change (n) to int
+var n = changeInt(usrinp())
 loop all x in range(0, n):
     check if x % 2 == 0:
         print(x + " is even")
@@ -817,16 +794,13 @@ print("x = 5, y = 4, rule = B3/S23\no3bob$4bo$o3bo$b4o!")
 FizzBuzz
 
 loop all n in range(1, 101):
-    print(element (n % 3 == 0])(n % 5 == 0) of [[i, "Fizz"], ["Buzz", "FizzBuzz"]])
+    print(element (n % 3 == 0)(n % 5 == 0) of ([[i, "Fizz"], ["Buzz", "FizzBuzz"]]))
 
 W110 from three inputs p, q, r
 
-var p = usrinp()
-var q = usrinp()
-var r = usrinp()
-change (p) to float
-change (q) to float
-change (r) to float
+var p = changeInt(usrinp())
+var q = changeInt(usrinp())
+var r = changeInt(usrinp())
 check if p == 0:
     check if q == 0:
         check if r == 0:
@@ -875,12 +849,10 @@ print(element (1) of (n))
 
 A+B Problem
 
-var a = usrinp()
-var b = usrinp()
-change (a) to float
-change (b) to float
+var a = changeFloat(usrinp())
+var b = changeFloat(usrinp())
 var sum = a + b
-print(sum)
+print(round (sum) to (0.00001))
 
 Primes using Erastothenes sieve
 
@@ -891,10 +863,10 @@ add (3) to list (Primes)
 add (5) to list (Primes)
 add (7) to list (Primes)
 loop 99:
-    check if mod(n, 2) != 0:
-        check if mod(n, 3) != 0:
-            check if mod(n, 5) != 0:
-                check if mod(n, 7) != 0:
+    check if n % 2 != 0:
+        check if n % 3 != 0:
+            check if n % 5 != 0:
+                check if n % 7 != 0:
                     add (n := n + 1) to list (Primes)
 remove (1) from list (Primes)
 loop all x in (Primes):
@@ -908,22 +880,22 @@ def divs(x):
         check if x % i == 0:
             add (i) to list (t)
     out t
-var n = usrinp()
-change (n) to int
+var n = changeInt(usrinp())
 print(divs(n))
 
 Digital root calculator
 
-var n = usrinp()
-change (n) to float
+var n = changeInt(usrinp())
 def digitroot(x):
-    out 1 + mod(n - 1, 9)
+    out 1 + (n - 1) % 9
 print(digitroot(x))
 
 XKCD Random Number
 
-var randomize = 4
-print(randomize)
+def Randomize():
+    out 4 /* Chosen by fair dice roll. */
+          /* Guaranteed to be random. */
+print(Randomize())
 
 Infinite loop
 
@@ -932,10 +904,9 @@ while 1:
 
 Pi
 
-var n = usrinp()
+var n = changeInt(usrinp())
 var p = 0
 var PiSum = []
-change (p) to int
 def f(x):
     out ((4 * x)! * (1103 + 26390 * x)) / ((x!) ** 4 * 396 ** (4 * x))
 loop n:
@@ -953,10 +924,9 @@ print("    ___         ___    _________    ___      �
 
 Euler-Mascheroni constant to desired precision
 
-var t1 = usrinp()
+var t1 = changeInt(usrinp())
 var PiSum = []
 var harmonicnum = []
-change (t1) to int
 var n = 0
 loop t1:
     var t2 = 1 / n!
@@ -964,8 +934,7 @@ loop t1:
     var n += 1
 var t3 = log(list add (sumofe), t1)
 var t4 = 1
-var p = usrinp()
-change (p) to int
+var p = changeInt(usrinp())
 loop p:
     var t5 = 1 / t4
     add t5 to list (harmonicnum)
@@ -975,12 +944,8 @@ print(t6)
 
 Malbolge tritwise crazy operation
 
-var a = usrinp()
-change (a) to int
-var a = mod(a, 3)
-var b = usrinp()
-change (b) to int
-var b = mod(b, 3)
+var a = changeInt(usrinp()) % 3
+var b = changeInt(usrinp()) % 3
 def crazy(x1, x2):
     check if x1 == 0:
         check if x2 == 0:
@@ -1011,23 +976,22 @@ Kolakoski sequence
     var i = 2
     while True:
         print(element (i - 2) of k)
-        k += [3 - k[-1]] * element (i) of (k)
-        i += 1
+        var k += [3 - element (-1) of (k)] * element (i) of (k)
+        var i += 1
 
 Tommyaweosme constant
 
 var a = 1
 while 1:
-    print(56) a := a + 1 times
+    print("56" * (a := a + 1))
     [smooth]
     print(87)
 
 Tommyaweosme function
 
-var a = usrinp()
-change (a) to int
+var a = changeInt(usrinp())
 var b = 2 * (a + 5)
-check if mod(b, 10) == 0:
+check if b % 10 == 0:
     print (87)
 else:
     while 1:
@@ -1035,13 +999,9 @@ else:
 
 6-function calculator
 
-    var a1 = usrinp()
-    change (a1) to int
-    var a2 = usrinp()
-    change (a2) to int
-    var a3 = usrinp()
-    change (a3) to int
-    var a3 = mod(a3, 6) + 1
+    var a1 = changeInt(usrinp())
+    var a2 = changeInt(usrinp())
+    var a3 = changeInt(usrinp()) % 6 + 1
     check if a3 == 1:
         def f(x, y):
             out x + y
@@ -1069,13 +1029,9 @@ else:
 
 4-function calculator
 
-    var a1 = usrinp()
-    change (a1) to int
-    var a2 = usrinp()
-    change (a2) to int
-    var a3 = usrinp()
-    change (a3) to int
-    var a3 = mod(a3, 4) + 1
+    var a1 = changeInt(usrinp())
+    var a2 = changeInt(usrinp())
+    var a3 = changeInt(usrinp()) % 4 + 1
     check if a3 == 1:
         def f(x, y):
             out x + y
@@ -1099,15 +1055,14 @@ var a = usrinp()
 change (a) to int
 var b = usrinp()
 change (b) to int
-def f(x1, x2):
+def f(m, n):
     out hyp(2, m, n + 3) + 3
 var t = f(a, b)
 print(t)
 
 Sgn Machine
 
-var a = usrinp()
-change (a) to float
+var a = changeFloat(usrinp())
 check if a > 0:
     print(1)
 else check if a == 0:
@@ -1118,9 +1073,8 @@ else:
 
 User:PrySigneToFry/烂下攫用乴 function
 
-var n = usrinp()
-change (n) to int
-vả Prod = []
+var n = changeInt(usrinp())
+var Prod = []
 var p = 1
 loop n:
     add (sin(p ** 3 + 1)) to list (Prod)
@@ -1128,8 +1082,7 @@ print(list multiply (Prod))
 
 Recaman sequence
 
-var n = usrinp()
-change (n) to int
+var n = changeInt(usrinp())
 var t = 0
 var a = 0
 var r = []
@@ -1150,8 +1103,8 @@ run(n)
 Graham's number
 
 def g(x):
-    check if x = 1:
-        out hyp(3, 4, 3)
+    check if x == 0:
+        out 4
     else:
         out hyp(3, g(x - 1), 3)
 print(g(64))
@@ -1166,10 +1119,10 @@ ROT13 encoder
         add (char(i) + 64) to list (t)
     loop all x in a:
         check if (x) in (n):
-            print(element (mod(index (n) of element (x) + 13), 26) of (n))
+            print(element (index (n) of element (x) + 13) % 26) of (n))
             [smooth]
         else check if (x) in (t):
-            print(element (mod(index (n) of element (x) + 13), 26) of (n))
+            print(element (index (t) of element (x) + 13) % 26) of (t))
                 [smooth]
         else:
                 print (x)
@@ -1189,13 +1142,13 @@ Cheating narcissist
 
 Golfed:
 
-    n = usrinp();(n==src) ? yes: (print("Accept!")) no: (print("Decline."))
+    n = usrinp();(n==src)? yes:(print("Accept!")) no:(print("Decline."))
 
 Ruler function
 
     var a = 1
     while 1:
-        b = log(2, a & (- a)) + 1
+        b = log(2, a & (-a)) + 1
         change (b) to int
         print(b)
         var a += 1
@@ -1214,7 +1167,7 @@ CT interpreter
     var d = usrinp("Data-string: ")
     var t = 0
     while not isspace(d):
-        print(d := ct(d, p[mod(t, length(p))]))
+        print(d := ct(d, p[t % length(p)]))
         var t += 1
 
 Real quine
@@ -1228,12 +1181,10 @@ Another:
 
 Fun Video Game
 
-    var n = usrinp()
-    change (n) to int
+    var n = changeInt(usrinp())
     var t = 0
     while t == n:
-        var n = usrinp()
-        change (n) to int
+        var n = changeInt(usrinp())
         var t += 1
     print("FAILURE")
 
@@ -1299,9 +1250,14 @@ Project Euler/3
         check if n > 4:
             var prime = n
         out prime
-    n = usrinp()
-    change (n) to int
+    n = changeInt(usrinp())
     print(largestPrimeFactor(n))
+
+Gray code
+
+    grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
+    n = changeInt(usrinp())
+    print(grayCode(n))
 
 Categories
 
