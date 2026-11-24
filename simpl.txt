@@ -1199,10 +1199,9 @@ The Exasperation Machine interpreter
         check if c in '/\\' and tape.get(ptr, 0) or c in '><':
             var ptr += value of (c) in ({'>': 1, '<': -1, '/': 1, '\\': -1})
         else check if c in '10':
-            change (c) to int
-            var t = c
-            change (c) to str
-            var element (ptr) of (tape) = t
+            var c = changeInt(c)
+            var element (ptr) of (tape) = str(c)
+            var c = changeStr(c)
         var ip = (ip + 1) % length(src)
 
 Project Euler
