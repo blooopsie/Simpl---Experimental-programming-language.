@@ -1190,19 +1190,19 @@ Fun Video Game
 
 The Exasperation Machine interpreter
 
-    var src = usrinp()
+    var source = usrinp()
     var tape = {}
     var ptr = 0
     var ip = 0
     while True:
-        var c = element (ip) of (src)
+        var c = element (ip) of (source)
         check if c in '/\\' and tape.get(ptr, 0) or c in '><':
             var ptr += value of (c) in ({'>': 1, '<': -1, '/': 1, '\\': -1})
         else check if c in '10':
             var c = changeInt(c)
-            var element (ptr) of (tape) = str(c)
-            var c = changeStr(c)
-        var ip = (ip + 1) % length(src)
+            var element (ptr) of (tape) = changeStr(c)
+        var c = changeStr(c)
+        var ip = (ip + 1) % length(source)
 
 Project Euler
 
