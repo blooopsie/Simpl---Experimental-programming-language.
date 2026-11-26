@@ -1254,11 +1254,6 @@ Project Euler/3
 
 Gray code
 
-    grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
-    n = changeInt(usrinp())
+    var grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
+    var n = changeInt(usrinp())
     print(grayCode(n))
-
-Categories
-
-Category:Languages Category:2026 Category:Unimplemented Category:Turing
-complete Category:High-level
