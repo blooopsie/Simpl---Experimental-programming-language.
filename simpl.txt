@@ -215,7 +215,7 @@ Syntax
 | continue                         | Same as in Python.               |
 +----------------------------------+----------------------------------+
 | """                              | Docstring.                       |
-| ...                              |                                  |
+| ...                              |                                  |
 | """                              |                                  |
 +----------------------------------+----------------------------------+
 | iterable[n]                      | Nth item of the iterable.        |
@@ -344,7 +344,7 @@ You can create multiple objects:
 init method:
 
     class Car:
-        initclass(self, brand, name)
+        def initclass(self, brand, name)
             self.brand = brand
             self.name = name
     Car1 = Car("Bugatti", "Chiron")
@@ -354,7 +354,7 @@ init method:
 Change a property:
 
      class Cat:
-         initclassclass(self, breed)
+         def initclassclass(self, breed)
              self.breed = breed
     cat1 = Cat("Munchkin")
     cat1.breed = "Maine Coon"
@@ -363,7 +363,7 @@ Change a property:
 Inheritance and polymorphism:
 
     class Esolang:
-        initclass(self, creator)
+        def initclass(self, creator)
             self.creator = creator
         def cat(self):
             print("") /*The method from the parent.*/
@@ -686,143 +686,143 @@ Examples
 
 Hello, world!
 
-print("Hello, World!")
+print("Hello, World!")
 
 Fibonacci sequence
 
-a = 0
-n = changeInt(usrinp())
-def fib(x) :
-    out fib(x - 1) + fib(x - 2)
-    check if x == 0:
-        out 0
-    check if x == 1:
-        out 1
-loop n:
-    add (fib(a := a + 1)) to list (FibonacciNumbers)
+a = 0
+n = changeInt(usrinp())
+def fib(x) :
+    out fib(x - 1) + fib(x - 2)
+    check if x == 0:
+        out 0
+    check if x == 1:
+        out 1
+loop n:
+    add (fib(a := a + 1)) to list (FibonacciNumbers)
 print(FibonacciNumbers)
 
 Collatz sequence
 
-a = changeInt(usrinp())
-def col (x) : 
-    check if x % 2 == 1:
-        out 3 * x + 1 
-    else: 
-        out x // 2
-while a != 1:
-    a = col(a)
-    add (a) to list (CollatzSequence)
-print (CollatzSequence)
+a = changeInt(usrinp())
+def col (x) : 
+    check if x % 2 == 1:
+        out 3 * x + 1 
+    else: 
+        out x // 2
+while a != 1:
+    a = col(a)
+    add (a) to list (CollatzSequence)
+print (CollatzSequence)
 
 Truth-machine
 
-a = changeInt(usrinp())
-check if a == 0:
-    print(0)
+a = changeInt(usrinp())
+check if a == 0:
+    print(0)
 else:
-check if a == 1:
-    while 1:
-        print(1)
+check if a == 1:
+    while 1:
+        print(1)
 
 Shorter:
 
-a = changeInt(usrinp())
+a = changeInt(usrinp())
 print(a)
-while a:
-    print(a)
+while a:
+    print(a)
 
 Check even/odd
 
-a = changeInt(usrinp())
-check if a % 2 == 0:
-    print(a)(" is even")
+a = changeInt(usrinp())
+check if a % 2 == 0:
+    print(a)(" is even")
 else:
-    print(a)(" is odd")
+    print(a)(" is odd")
 
 Looping counter
 
-a = ""
-while True:
-    print(a := a + "*")
+a = ""
+while True:
+    print(a := a + "*")
 
 99 bottles of beer on the wall
 
-n = 99
-while n != 2:
-    print(n)(" bottles of beer on the wall\n")(n)(" bottles of beer")
-    print("Take one down, pass it around\n")(n := n - 1)(" bottles of beer on the wall\n")
+n = 99
+while n != 2:
+    print(n)(" bottles of beer on the wall\n")(n)(" bottles of beer")
+    print("Take one down, pass it around\n")(n := n - 1)(" bottles of beer on the wall\n")
 print("""
-2 bottles of beer on the wall
-2 bottles of beer
-Take one down, pass it around
-1 bottle of beer on the wall
-1 bottles of beer on the wall
-1 bottles of beer
-Take one down, pass it around
-No bottles of beer on the wall
-No bottles of beer on the wall
-No bottles of beer
-Go to the store, buy some more,
-99 bottles of beer on the wall
+2 bottles of beer on the wall
+2 bottles of beer
+Take one down, pass it around
+1 bottle of beer on the wall
+1 bottles of beer on the wall
+1 bottles of beer
+Take one down, pass it around
+No bottles of beer on the wall
+No bottles of beer on the wall
+No bottles of beer
+Go to the store, buy some more,
+99 bottles of beer on the wall
 """)
 
 Factorials
 
-n = changeInt(usrinp())
+n = changeInt(usrinp())
 print(n!)
 
 Disan count
 
-n = changeInt(usrinp())
-loop all x in range(0, n):
-    check if x % 2 == 0:
-        print(x + " is even")
+n = changeInt(usrinp())
+loop all x in range(0, n):
+    check if x % 2 == 0:
+        print(x + " is even")
 
 Conway’s Game Of Life LWSS
 
-print("o . . . o .\n. . . . o\no . . . o\n. o o o o")
+print("o . . . o .\n. . . . o\no . . . o\n. o o o o")
 
 Or this:
 
-print("x = 5, y = 4, rule = B3/S23\no3bob$4bo$o3bo$b4o!")
+print("x = 5, y = 4, rule = B3/S23\no3bob$4bo$o3bo$b4o!")
 
 FizzBuzz
 
-loop all n in range(1, 101):
-    print(element (n % 3 == 0)(n % 5 == 0) of ([[i, "Fizz"], ["Buzz", "FizzBuzz"]]))
+loop all n in range(1, 101):
+    print(element (n % 3 == 0)(n % 5 == 0) of ([[i, "Fizz"], ["Buzz", "FizzBuzz"]]))
 
 W110 from three inputs p, q, r
 
-p = changeInt(usrinp())
-q = changeInt(usrinp())
-r = changeInt(usrinp())
-check if p == 0:
-    check if q == 0:
-        check if r == 0:
-            print(0)
-        check if r == 1:
-            print(1)
-    check if q == 1:
-        check if r == 0:
-            print(1)
-        check if r == 1:
-            print(1)
-check if p == 1:
-    check if q == 0:
-        check if r == 0:
-            print(0)
-        check if r == 1:
-            print(1)
-    check if q == 1:
-        check if r == 0:
-            print(1)
-        check if r == 1:
-            print(0)
+p = changeInt(usrinp())
+q = changeInt(usrinp())
+r = changeInt(usrinp())
+check if p == 0:
+    check if q == 0:
+        check if r == 0:
+            print(0)
+        check if r == 1:
+            print(1)
+    check if q == 1:
+        check if r == 0:
+            print(1)
+        check if r == 1:
+            print(1)
+check if p == 1:
+    check if q == 0:
+        check if r == 0:
+            print(0)
+        check if r == 1:
+            print(1)
+    check if q == 1:
+        check if r == 0:
+            print(1)
+        check if r == 1:
+            print(0)
 
 Cat program
 
-n = usrinp()
+n = usrinp()
 print(n)
 
 Shorter:
@@ -831,140 +831,140 @@ print(usrinp())
 
 Includes linefeeds:
 
-while 1:
-    print(usrinp())
+while 1:
+    print(usrinp())
 
 Reverse cat
 
-print(element (::-1) of (usrinp()))
+print(element (::-1) of (usrinp()))
 
 One time cat
 
-n = usrinp()
-print(element (1) of (n))
+n = usrinp()
+print(element (1) of (n))
 
 A+B Problem
 
-a = changeFloat(usrinp())
-b = changeFloat(usrinp())
-sum = a + b
-print(round (sum) to (0.00001))
+a = changeFloat(usrinp())
+b = changeFloat(usrinp())
+sum = a + b
+print(round (sum) to (0.00001))
 
 Primes using Erastothenes sieve
 
-n = 1
-Primes = []
-add (2) to list (Primes)
-add (3) to list (Primes)
-add (5) to list (Primes)
-add (7) to list (Primes)
-loop 99:
-    check if n % 2 != 0:
-        check if n % 3 != 0:
-            check if n % 5 != 0:
-                check if n % 7 != 0:
-                    add (n := n + 1) to list (Primes)
-remove (1) from list (Primes)
-loop all x in (Primes):
-    print(x)
+n = 1
+Primes = []
+add (2) to list (Primes)
+add (3) to list (Primes)
+add (5) to list (Primes)
+add (7) to list (Primes)
+loop 99:
+    check if n % 2 != 0:
+        check if n % 3 != 0:
+            check if n % 5 != 0:
+                check if n % 7 != 0:
+                    add (n := n + 1) to list (Primes)
+remove (1) from list (Primes)
+loop all x in (Primes):
+    print(x)
 
 Divisors
 
-def divs(x):
-    t = []
-    loop all i in range(1, x + 1):
-        check if x % i == 0:
-            add (i) to list (t)
-    out t
-n = changeInt(usrinp())
+def divs(x):
+    t = []
+    loop all i in range(1, x + 1):
+        check if x % i == 0:
+            add (i) to list (t)
+    out t
+n = changeInt(usrinp())
 print(divs(n))
 
 Digital root calculator
 
-n = changeInt(usrinp())
-def digitroot(x):
-    out 1 + (n - 1) % 9
+n = changeInt(usrinp())
+def digitroot(x):
+    out 1 + (n - 1) % 9
 print(digitroot(x))
 
 XKCD Random Number
 
-def Randomize():
-    out 4 /* Chosen by fair dice roll. */
-          /* Guaranteed to be random. */
+def Randomize():
+    out 4 /* Chosen by fair dice roll. */
+          /* Guaranteed to be random. */
 print(Randomize())
 
 Infinite loop
 
-while 1:
-    pass
+while 1:
+    pass
 
 Pi
 
-n = changeInt(usrinp())
-p = 0
-PiSum = []
-def f(x):
-    out ((4 * x)! * (1103 + 26390 * x)) / ((x!) ** 4 * 396 ** (4 * x))
-loop n:
-    t = f(p := p + 1)
-    change (t) to int
-    add t to list (PiSum)
-a1 = list add (PiSum)
-a2 = a1 * (2 * sqrt(2)) / 9801
-a3 = 1 / a2
+n = changeInt(usrinp())
+p = 0
+PiSum = []
+def f(x):
+    out ((4 * x)! * (1103 + 26390 * x)) / ((x!) ** 4 * 396 ** (4 * x))
+loop n:
+    t = f(p := p + 1)
+    change (t) to int
+    add t to list (PiSum)
+a1 = list add (PiSum)
+a2 = a1 * (2 * sqrt(2)) / 9801
+a3 = 1 / a2
 print(a3)
 
 "Welcome" text in the istplng talk page archive before july 10th 2025
 
-print("    ___         ___    _________    ___          ________     _______       ______ _____      _________\n   /  /| ___   /  /|  /  ______/|  /  /|       ,' ______/|  ,' ____  \\    ,' ___  '___  \\    /  ______/|\n  /  / //  /| /  / / /  /|_____|/ /  / /      /  /|_____|/ /  /|__/  /|  /  /|_/  /|_/  /|  /  /|_____|/\n /  / //  / //  / / /  ______/|  /  / /      /  / /       /  / / /  / / /  / //  / //  / / /  ______/|\n/  /_//  /_//  / / /  /|_____|/ /  /_/___   /  /_/____   /  /_/_/  / / /  / //__/ //  / / /  /|_____|/\n\\______,_____,' / /________/|  /________/|  \\________/|  \\_______,' / /__/ / |__|//__/ / /________/|\n\\______,______,'  |________|/  |________|/  \\________|/  \\________,'  |__|/       |__|/  |________|/")
+print("    ___         ___    _________    ___          ________     _______       ______ _____      _________\n   /  /| ___   /  /|  /  ______/|  /  /|       ,' ______/|  ,' ____  \\    ,' ___  '___  \\    /  ______/|\n  /  / //  /| /  / / /  /|_____|/ /  / /      /  /|_____|/ /  /|__/  /|  /  /|_/  /|_/  /|  /  /|_____|/\n /  / //  / //  / / /  ______/|  /  / /      /  / /       /  / / /  / / /  / //  / //  / / /  ______/|\n/  /_//  /_//  / / /  /|_____|/ /  /_/___   /  /_/____   /  /_/_/  / / /  / //__/ //  / / /  /|_____|/\n\\______,_____,' / /________/|  /________/|  \\________/|  \\_______,' / /__/ / |__|//__/ / /________/|\n\\______,______,'  |________|/  |________|/  \\________|/  \\________,'  |__|/       |__|/  |________|/")
 
 Euler-Mascheroni constant to desired precision
 
-t1 = changeInt(usrinp())
-PiSum = []
-harmonicnum = []
-n = 0
-loop t1:
-    t2 = 1 / n!
-    add t2 to list (sumofe)
-    n += 1
-t3 = log(list add (sumofe), t1)
-t4 = 1
-p = changeInt(usrinp())
-loop p:
-    t5 = 1 / t4
-    add t5 to list (harmonicnum)
-    t4 += 1
-t6 = list add (harmonicnum) - t3
+t1 = changeInt(usrinp())
+PiSum = []
+harmonicnum = []
+n = 0
+loop t1:
+    t2 = 1 / n!
+    add t2 to list (sumofe)
+    n += 1
+t3 = log(list add (sumofe), t1)
+t4 = 1
+p = changeInt(usrinp())
+loop p:
+    t5 = 1 / t4
+    add t5 to list (harmonicnum)
+    t4 += 1
+t6 = list add (harmonicnum) - t3
 print(t6)
 
 Malbolge tritwise crazy operation
 
-a = changeInt(usrinp()) % 3
-b = changeInt(usrinp()) % 3
-def crazy(x1, x2):
-    check if x1 == 0:
-        check if x2 == 0:
-            out 1
-        check if x2 == 1:
-            out 1
-        check if x2 == 2:
-            out 2
-    check if x1 == 1:
-        check if x2 == 0:
-            out 0
-        check if x2 == 1:
-            out 0
-        check if x2 == 2:
-            out 2
-    check if x1 == 2:
-        check if x2 == 0:
-            out 0
-        check if x2 == 1:
-            out 2
-        check if x2 == 2:
-            out 1
-print(crazy(a, b))
+a = changeInt(usrinp()) % 3
+b = changeInt(usrinp()) % 3
+def crazy(x1, x2):
+    check if x1 == 0:
+        check if x2 == 0:
+            out 1
+        check if x2 == 1:
+            out 1
+        check if x2 == 2:
+            out 2
+    check if x1 == 1:
+        check if x2 == 0:
+            out 0
+        check if x2 == 1:
+            out 0
+        check if x2 == 2:
+            out 2
+    check if x1 == 2:
+        check if x2 == 0:
+            out 0
+        check if x2 == 1:
+            out 2
+        check if x2 == 2:
+            out 1
+print(crazy(a, b))
 
 Kolakoski sequence
 
@@ -977,21 +977,21 @@ Kolakoski sequence
 
 Tommyaweosme constant
 
-a = 1
-while 1:
-    print("56" * (a := a + 1))
-    [smooth]
-    print(87)
+a = 1
+while 1:
+    print("56" * (a := a + 1))
+    [smooth]
+    print(87)
 
 Tommyaweosme function
 
-a = changeInt(usrinp())
-b = 2 * (a + 5)
-check if b % 10 == 0:
-    print (87)
+a = changeInt(usrinp())
+b = 2 * (a + 5)
+check if b % 10 == 0:
+    print (87)
 else:
-    while 1:
-        print (56)
+    while 1:
+        print (56)
 
 6-function calculator
 
@@ -1047,62 +1047,62 @@ else:
 
 Ackermann function
 
-a = usrinp()
-change (a) to int
-b = usrinp()
-change (b) to int
-def f(m, n):
-    out hyp(2, m, n + 3) + 3
-t = f(a, b)
+a = usrinp()
+change (a) to int
+b = usrinp()
+change (b) to int
+def f(m, n):
+    out hyp(2, m, n + 3) + 3
+t = f(a, b)
 print(t)
 
 Sgn Machine
 
-a = changeFloat(usrinp())
-check if a > 0:
-    print(1)
-else check if a == 0:
-    while 1:
-        print(0)
+a = changeFloat(usrinp())
+check if a > 0:
+    print(1)
+else check if a == 0:
+    while 1:
+        print(0)
 else:
-    print(-1)
+    print(-1)
 
 User:PrySigneToFry/烂下攫用乴 function
 
-n = changeInt(usrinp())
-Prod = []
-p = 1
-loop n:
-    add (sin(p ** 3 + 1)) to list (Prod)
-print(list multiply (Prod))
+n = changeInt(usrinp())
+Prod = []
+p = 1
+loop n:
+    add (sin(p ** 3 + 1)) to list (Prod)
+print(list multiply (Prod))
 
 Recaman sequence
 
-n = changeInt(usrinp())
-t = 0
-a = 0
-r = []
-loop n:
-    check if t >= 0:
-        check if t - a < 0 or t - a in (r):
-            add (t := t + a) to list (r)
-        else:
-            add (t := t - a) to list (r)
-    a = a + 1
-print list (rec)
+n = changeInt(usrinp())
+t = 0
+a = 0
+r = []
+loop n:
+    check if t >= 0:
+        check if t - a < 0 or t - a in (r):
+            add (t := t + a) to list (r)
+        else:
+            add (t := t - a) to list (r)
+    a = a + 1
+print list (rec)
 
 Self-interpreter
 
-n = usrinp()
+n = usrinp()
 run(n)
 
 Graham's number
 
-def g(x):
-    check if x == 0:
-        out 4
-    else:
-        out hyp(3, g(x - 1), 3)
+def g(x):
+    check if x == 0:
+        out 4
+    else:
+        out hyp(3, g(x - 1), 3)
 print(g(64))
 
 ROT13 encoder
@@ -1253,5 +1253,3 @@ Gray code
     grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
     n = changeInt(usrinp())
     print(grayCode(n))
-
-
