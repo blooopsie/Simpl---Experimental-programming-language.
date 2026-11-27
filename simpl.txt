@@ -84,15 +84,14 @@ Syntax
 +----------------------------------+----------------------------------+
 | def f(x): [blah blah blah]       | Defines a function.              |
 +----------------------------------+----------------------------------+
-| var a = [blah blah blah]         | Sets variable a to [blah blah    |
-|                                  | blah]. var must be used in all   |
-|                                  | variable definitions.            |
+| a = [blah blah blah]             | Sets variable a to [blah blah    |
+|                                  | blah].                           |
 +----------------------------------+----------------------------------+
 | print (n)("cars")                | Concatenation.                   |
 +----------------------------------+----------------------------------+
 | endsys(n)                        | End program with exit code n.    |
 +----------------------------------+----------------------------------+
-| var a = usrinp()                 | Sets variable a as the user      |
+| a = usrinp()                     | Sets variable a as the user      |
 |                                  | input.                           |
 +----------------------------------+----------------------------------+
 | check if [desired condition]:    | If desired condition is met...   |
@@ -130,8 +129,8 @@ Syntax
 | rand integer between (a) (b)     | Picks random integer between a   |
 |                                  | and b.                           |
 +----------------------------------+----------------------------------+
-| var ([listname]) = [blah blah    | Sets the list [listname] to      |
-| blah]                            | [blah blah blah]. Note that      |
+| ([listname]) = [blah blah blah]  | Sets the list [listname] to      |
+|                                  | [blah blah blah]. Note that      |
 |                                  | lists can be nested.             |
 +----------------------------------+----------------------------------+
 | [smooth]                         | Remove trailing newline.         |
@@ -173,7 +172,7 @@ Syntax
 |                                  | (a::b), (::b)), as well as       |
 |                                  | double+ indexing (element        |
 |                                  | ()()... of ()) and assignment    |
-|                                  | (var element (n) of (mylist) =   |
+|                                  | (element (n) of (mylist) =       |
 |                                  | "foo")                           |
 +----------------------------------+----------------------------------+
 | length()                         | Returns length of a string,      |
@@ -262,15 +261,12 @@ Note 5: Variables can either be strings or integers or floats.
 
 Note 6: Simpl is 0-indexed.
 
-Note 7: Simpl doesn't support imaginary and complex numbers unless the
-compdomain module is imported.
+Note 7: The user input is always treated as a string.
 
-Note 8: The user input is always treated as a string.
-
-Note 9: All functions compatible with strings are also compatible with
+Note 8: All functions compatible with strings are also compatible with
 docstrings.
 
-Note 10: Both strings and lists are iterables.
+Note 9: Both strings and lists are iterables.
 
 -   Identifier names can:
     -   have letters
@@ -319,29 +315,29 @@ OOP
 Create class with property:
 
     class MyClass:
-        prop x = 2
+        x = 2
 
 Create class and use it to make object:
 
     class MyClass:
-        prop n = 4
-    var p1 = MyClass(self.n)
+        n = 4
+    p1 = MyClass(self.n)
     print(p1.n)
 
 Delete object:
 
     class MyClass:
-        prop k = 10
-    var n = MyClass(self.k)
+        k = 10
+    n = MyClass(self.k)
     del(n)
 
 You can create multiple objects:
 
     class MyClass:
-        prop n = 4
-        prop p = 6
-    var p1 = MyClass(self.n)
-    var p2 = MyClass(self.p)
+        n = 4
+        p = 6
+    p1 = MyClass(self.n)
+    p2 = MyClass(self.p)
     print(p1.n)
     print(p2.n)
 
@@ -349,9 +345,9 @@ init method:
 
     class Car:
         initclass(self, brand, name)
-            prop self.brand = brand
-            prop self.name = name
-    var Car1 = Car("Bugatti", "Chiron")
+            self.brand = brand
+            self.name = name
+    Car1 = Car("Bugatti", "Chiron")
     print(Car.brand)
     print(Car.name)
 
@@ -359,8 +355,8 @@ Change a property:
 
      class Cat:
          initclassclass(self, breed)
-             prop self.breed = breed
-    var cat1 = Cat("Munchkin")
+             self.breed = breed
+    cat1 = Cat("Munchkin")
     cat1.breed = "Maine Coon"
     print(cat1.breed)
 
@@ -368,7 +364,7 @@ Inheritance and polymorphism:
 
     class Esolang:
         initclass(self, creator)
-            prop self.creator = creator
+            self.creator = creator
         def cat(self):
             print("") /*The method from the parent.*/
     class Brainfuck(child.Esolang):
@@ -377,9 +373,9 @@ Inheritance and polymorphism:
     class Befunge(child.Esolang):
         def cat(self):
             print("~:1+!#@_,")
-    var Esos = [] /*Make empty list.*/
-    var bef1 = Befunge("Chris Pressey") /Make a Befunge object./
-    var bf1 = Brainfuck("Urban Muller") /Make a Brainfuck object./
+    Esos = [] /*Make empty list.*/
+    bef1 = Befunge("Chris Pressey") /Make a Befunge object./
+    bf1 = Brainfuck("Urban Muller") /Make a Brainfuck object./
     add (bef1) to list (Esos)
     add (bf1) to list (Esos)
     loop all x in (Esos):
@@ -680,7 +676,7 @@ Multiple commands in one line:
 
 Ternary operator:
 
-    var var_name = (cond) ? yes: (/*value1*/) no: (/*value2*/)
+    var_name = (cond) ? yes: (/*value1*/) no: (/*value2*/)
 
 Or this:
 
@@ -694,8 +690,8 @@ print("Hello, World!")
 
 Fibonacci sequence
 
-var a = 0
-var n = changeInt(usrinp())
+a = 0
+n = changeInt(usrinp())
 def fib(x) :
     out fib(x - 1) + fib(x - 2)
     check if x == 0:
@@ -708,20 +704,20 @@ print(FibonacciNumbers)
 
 Collatz sequence
 
-var a = changeInt(usrinp())
+a = changeInt(usrinp())
 def col (x) : 
     check if x % 2 == 1:
         out 3 * x + 1 
     else: 
         out x // 2
 while a != 1:
-    var a = col(a)
+    a = col(a)
     add (a) to list (CollatzSequence)
 print (CollatzSequence)
 
 Truth-machine
 
-var a = changeInt(usrinp())
+a = changeInt(usrinp())
 check if a == 0:
     print(0)
 else:
@@ -731,14 +727,14 @@ check if a == 1:
 
 Shorter:
 
-var a = changeInt(usrinp())
+a = changeInt(usrinp())
 print(a)
 while a:
     print(a)
 
 Check even/odd
 
-var a = changeInt(usrinp())
+a = changeInt(usrinp())
 check if a % 2 == 0:
     print(a)(" is even")
 else:
@@ -746,13 +742,13 @@ else:
 
 Looping counter
 
-var a = ""
+a = ""
 while True:
     print(a := a + "*")
 
 99 bottles of beer on the wall
 
-var n = 99
+n = 99
 while n != 2:
     print(n)(" bottles of beer on the wall\n")(n)(" bottles of beer")
     print("Take one down, pass it around\n")(n := n - 1)(" bottles of beer on the wall\n")
@@ -773,12 +769,12 @@ Go to the store, buy some more,
 
 Factorials
 
-var n = changeInt(usrinp())
+n = changeInt(usrinp())
 print(n!)
 
 Disan count
 
-var n = changeInt(usrinp())
+n = changeInt(usrinp())
 loop all x in range(0, n):
     check if x % 2 == 0:
         print(x + " is even")
@@ -798,9 +794,9 @@ loop all n in range(1, 101):
 
 W110 from three inputs p, q, r
 
-var p = changeInt(usrinp())
-var q = changeInt(usrinp())
-var r = changeInt(usrinp())
+p = changeInt(usrinp())
+q = changeInt(usrinp())
+r = changeInt(usrinp())
 check if p == 0:
     check if q == 0:
         check if r == 0:
@@ -826,7 +822,7 @@ check if p == 1:
 
 Cat program
 
-var n = usrinp()
+n = usrinp()
 print(n)
 
 Shorter:
@@ -844,20 +840,20 @@ print(element (::-1) of (usrinp()))
 
 One time cat
 
-var n = usrinp()
+n = usrinp()
 print(element (1) of (n))
 
 A+B Problem
 
-var a = changeFloat(usrinp())
-var b = changeFloat(usrinp())
-var sum = a + b
+a = changeFloat(usrinp())
+b = changeFloat(usrinp())
+sum = a + b
 print(round (sum) to (0.00001))
 
 Primes using Erastothenes sieve
 
-var n = 1
-var Primes = []
+n = 1
+Primes = []
 add (2) to list (Primes)
 add (3) to list (Primes)
 add (5) to list (Primes)
@@ -875,17 +871,17 @@ loop all x in (Primes):
 Divisors
 
 def divs(x):
-    var t = []
+    t = []
     loop all i in range(1, x + 1):
         check if x % i == 0:
             add (i) to list (t)
     out t
-var n = changeInt(usrinp())
+n = changeInt(usrinp())
 print(divs(n))
 
 Digital root calculator
 
-var n = changeInt(usrinp())
+n = changeInt(usrinp())
 def digitroot(x):
     out 1 + (n - 1) % 9
 print(digitroot(x))
@@ -904,18 +900,18 @@ while 1:
 
 Pi
 
-var n = changeInt(usrinp())
-var p = 0
-var PiSum = []
+n = changeInt(usrinp())
+p = 0
+PiSum = []
 def f(x):
     out ((4 * x)! * (1103 + 26390 * x)) / ((x!) ** 4 * 396 ** (4 * x))
 loop n:
-    var t = f(p := p + 1)
+    t = f(p := p + 1)
     change (t) to int
     add t to list (PiSum)
-var a1 = list add (PiSum)
-var a2 = a1 * (2 * sqrt(2)) / 9801
-var a3 = 1 / a2
+a1 = list add (PiSum)
+a2 = a1 * (2 * sqrt(2)) / 9801
+a3 = 1 / a2
 print(a3)
 
 "Welcome" text in the istplng talk page archive before july 10th 2025
@@ -924,28 +920,28 @@ print("    ___         ___    _________    ___      �
 
 Euler-Mascheroni constant to desired precision
 
-var t1 = changeInt(usrinp())
-var PiSum = []
-var harmonicnum = []
-var n = 0
+t1 = changeInt(usrinp())
+PiSum = []
+harmonicnum = []
+n = 0
 loop t1:
-    var t2 = 1 / n!
+    t2 = 1 / n!
     add t2 to list (sumofe)
-    var n += 1
-var t3 = log(list add (sumofe), t1)
-var t4 = 1
-var p = changeInt(usrinp())
+    n += 1
+t3 = log(list add (sumofe), t1)
+t4 = 1
+p = changeInt(usrinp())
 loop p:
-    var t5 = 1 / t4
+    t5 = 1 / t4
     add t5 to list (harmonicnum)
-    var t4 += 1
-var t6 = list add (harmonicnum) - t3
+    t4 += 1
+t6 = list add (harmonicnum) - t3
 print(t6)
 
 Malbolge tritwise crazy operation
 
-var a = changeInt(usrinp()) % 3
-var b = changeInt(usrinp()) % 3
+a = changeInt(usrinp()) % 3
+b = changeInt(usrinp()) % 3
 def crazy(x1, x2):
     check if x1 == 0:
         check if x2 == 0:
@@ -972,16 +968,16 @@ print(crazy(a, b))
 
 Kolakoski sequence
 
-    var k = [1, 2, 2]
-    var i = 2
+    k = [1, 2, 2]
+    i = 2
     while True:
         print(element (i - 2) of k)
-        var k += [3 - element (-1) of (k)] * element (i) of (k)
-        var i += 1
+        k += [3 - element (-1) of (k)] * element (i) of (k)
+        i += 1
 
 Tommyaweosme constant
 
-var a = 1
+a = 1
 while 1:
     print("56" * (a := a + 1))
     [smooth]
@@ -989,8 +985,8 @@ while 1:
 
 Tommyaweosme function
 
-var a = changeInt(usrinp())
-var b = 2 * (a + 5)
+a = changeInt(usrinp())
+b = 2 * (a + 5)
 check if b % 10 == 0:
     print (87)
 else:
@@ -999,9 +995,9 @@ else:
 
 6-function calculator
 
-    var a1 = changeInt(usrinp())
-    var a2 = changeInt(usrinp())
-    var a3 = changeInt(usrinp()) % 6 + 1
+    a1 = changeInt(usrinp())
+    a2 = changeInt(usrinp())
+    a3 = changeInt(usrinp()) % 6 + 1
     check if a3 == 1:
         def f(x, y):
             out x + y
@@ -1029,9 +1025,9 @@ else:
 
 4-function calculator
 
-    var a1 = changeInt(usrinp())
-    var a2 = changeInt(usrinp())
-    var a3 = changeInt(usrinp()) % 4 + 1
+    a1 = changeInt(usrinp())
+    a2 = changeInt(usrinp())
+    a3 = changeInt(usrinp()) % 4 + 1
     check if a3 == 1:
         def f(x, y):
             out x + y
@@ -1051,18 +1047,18 @@ else:
 
 Ackermann function
 
-var a = usrinp()
+a = usrinp()
 change (a) to int
-var b = usrinp()
+b = usrinp()
 change (b) to int
 def f(m, n):
     out hyp(2, m, n + 3) + 3
-var t = f(a, b)
+t = f(a, b)
 print(t)
 
 Sgn Machine
 
-var a = changeFloat(usrinp())
+a = changeFloat(usrinp())
 check if a > 0:
     print(1)
 else check if a == 0:
@@ -1073,31 +1069,31 @@ else:
 
 User:PrySigneToFry/烂下攫用乴 function
 
-var n = changeInt(usrinp())
-var Prod = []
-var p = 1
+n = changeInt(usrinp())
+Prod = []
+p = 1
 loop n:
     add (sin(p ** 3 + 1)) to list (Prod)
 print(list multiply (Prod))
 
 Recaman sequence
 
-var n = changeInt(usrinp())
-var t = 0
-var a = 0
-var r = []
+n = changeInt(usrinp())
+t = 0
+a = 0
+r = []
 loop n:
     check if t >= 0:
         check if t - a < 0 or t - a in (r):
             add (t := t + a) to list (r)
         else:
             add (t := t - a) to list (r)
-    var a = a + 1
+    a = a + 1
 print list (rec)
 
 Self-interpreter
 
-var n = usrinp()
+n = usrinp()
 run(n)
 
 Graham's number
@@ -1111,9 +1107,9 @@ print(g(64))
 
 ROT13 encoder
 
-    var n = []
-    var t = []
-    var a = usrinp()
+    n = []
+    t = []
+    a = usrinp()
     loop all i in range(1, 27):
         add (char(i) + 96) to list (n)
         add (char(i) + 64) to list (t)
@@ -1134,7 +1130,7 @@ Cheating quine
 
 Cheating narcissist
 
-    var n = usrinp()
+    n = usrinp()
     check if n == src:
         print("Accept!")
     else:
@@ -1146,12 +1142,12 @@ Golfed:
 
 Ruler function
 
-    var a = 1
+    a = 1
     while 1:
         b = log(2, a & (-a)) + 1
         change (b) to int
         print(b)
-        var a += 1
+        a += 1
 
 CT interpreter
 
@@ -1163,53 +1159,53 @@ CT interpreter
             out d + cmd
         else:
             out d
-    var p = usrinp("Program: ")
-    var d = usrinp("Data-string: ")
-    var t = 0
+    p = usrinp("Program: ")
+    d = usrinp("Data-string: ")
+    t = 0
     while not isspace(d):
         print(d := ct(d, p[t % length(p)]))
-        var t += 1
+        t += 1
 
 Real quine
 
-    var inp = "print('var inp = ' + char(34) + inp + char(34) + char(10) + inp)"
-    print('var inp = ' + char(34) + inp + char(34) + char(10) + inp)
+    inp = "print('inp = ' + char(34) + inp + char(34) + char(10) + inp)"
+    print('inp = ' + char(34) + inp + char(34) + char(10) + inp)
 
 Another:
 
-    var inp = "print('var inp = ' + char(34) + inp + char(34) + ';' + inp)";print('var inp = ' + char(34) + inp + char(34) + ';' + inp)
+    inp = "print('inp = ' + char(34) + inp + char(34) + ';' + inp)";print('inp = ' + char(34) + inp + char(34) + ';' + inp)
 
 Fun Video Game
 
-    var n = changeInt(usrinp())
-    var t = 0
+    n = changeInt(usrinp())
+    t = 0
     while t == n:
-        var n = changeInt(usrinp())
-        var t += 1
+        n = changeInt(usrinp())
+        t += 1
     print("FAILURE")
 
 The Exasperation Machine interpreter
 
-    var source = usrinp()
-    var tape = {}
-    var ptr = 0
-    var ip = 0
+    source = usrinp()
+    tape = {}
+    ptr = 0
+    ip = 0
     while True:
-        var c = element (ip) of (source)
+        c = element (ip) of (source)
         check if c in '/\\' and tape.get(ptr, 0) or c in '><':
-            var ptr += value of (c) in ({'>': 1, '<': -1, '/': 1, '\\': -1})
+            ptr += value of (c) in ({'>': 1, '<': -1, '/': 1, '\\': -1})
         else check if c in '10':
-            var c = changeInt(c)
-            var element (ptr) of (tape) = changeStr(c)
-        var c = changeStr(c)
-        var ip = (ip + 1) % length(source)
+            c = changeInt(c)
+            element (ptr) of (tape) = changeStr(c)
+        c = changeStr(c)
+        ip = (ip + 1) % length(source)
 
 Project Euler
 
 Project Euler/1
 
     def sumofMult(x):
-        var n = []
+        n = []
         loop all i in range(1, x):
             add (i) to list (n)
         out list add (n)
@@ -1218,7 +1214,7 @@ Project Euler/1
 Project Euler/2
 
     def sumFib(t):
-        var n = []
+        n = []
         loop all x in range(1, t):
             check if ((5 * x ** 2 + 4) ** 0.5 % 1 == 0 or (5 * x ** 2 - 4) ** 0.5 % 1 == 0) and x % 2 == 0:
                 add (x) to list (n)
@@ -1228,32 +1224,34 @@ Project Euler/2
 Project Euler/3
 
     def largestPrimeFactor(n):
-        var prime = 2
+        prime = 2
         while n % 2 == 0:
-            var n //= 2
+            n //= 2
         check if n == 1:
             out 2
         else:
-            var prime = 3
+            prime = 3
         while n % 3 == 0:
-            var n //= 3
-        var i = 5
+            n //= 3
+        i = 5
         while i < n ** 0.5:
             while n % i == 0:
-                var prime = i
-                var n //= i
+                prime = i
+                n //= i
             while n % (i + 2) == 0:
-                var prime = i + 2
-                var n //= i + 2
-            var i += 6
+                prime = i + 2
+                n //= i + 2
+            i += 6
         check if n > 4:
-            var prime = n
+            prime = n
         out prime
     n = changeInt(usrinp())
     print(largestPrimeFactor(n))
 
 Gray code
 
-    var grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
-    var n = changeInt(usrinp())
+    grayCode = lambda def x: element (2:) of (bin(x ^ x // 2))
+    n = changeInt(usrinp())
     print(grayCode(n))
+
+
