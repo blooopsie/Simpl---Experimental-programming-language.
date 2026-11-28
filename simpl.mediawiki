@@ -261,7 +261,7 @@ Note 9: Both strings and lists are iterables.
 Operators at the same level are evaluated from left to right.
 
 ==OOP==
-===Create class with erty:===
+===Create class with property:===
 <pre>
 class MyClass:
     x = 2
